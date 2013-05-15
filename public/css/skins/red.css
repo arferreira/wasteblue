@@ -1,0 +1,58 @@
+#header.bg{
+background-color:#CD2122;
+}
+#header.bg,.sort a.current_link{background-color:#CD2122;}.service-block:hover{background-color:#CD2122}section.social ul li a.facebook:hover{background:#CD2122;}section.social ul li a.twitter:hover{background:#CD2122;}section.social ul li a.google-plus:hover{background:#CD2122;}.flex control-paging li a.flex-active{background:#CD2122;}.da-thumbs li .main div{background-color:#CD2122;}.recent-blog .containt:hover{background-color:#CD2122;}.flex-control-paging li a.flex-active{background-color:#CD2122;}.flex-control-paging li a:hover{background-color:#CD2122;}#bx-pager{border-top:2px solid #CD2122;}#bx-pager a.active:before{border-top-color:#CD2122;}.bx-wrapper .bx-prev:hover{background-color:#CD2122}.bx-wrapper .bx-next:hover{background-color:#CD2122}#footer .footer-widget ul.list li a:before{background-color:#CD2122;}#footer .footer-widget ul.list li a:hover:before{background-color:#CD2122;color:#CD2122;}#footer .footer-widget ul.list li a:hover{color:#CD2122;}.carousel .next:hover, .carousel .prev:hover,a.submit,.bottom-footer,.sf-menu li a:hover{background-color:#CD2122;}.bx-wrapper li a span{color:#CD2122;}#footer,#footer .footer-widget h4:before{border-top-color:#CD2122;}.sf-menu li li:hover .icon span{color:#CD2122;}.sf-menu a, .sf-menu a:visited{color:#CD2122;}.sf-menu li a{color:#CD2122;}.sf-menu .sfHover>a{color:#fff;background:#CD2122;}.sf-menu li li{background:#CD2122;}.stylish>span,div.comment-cout,.arrow-circle{background-color:#CD2122;}.halfCircleBottom,.halfCircleright{border-color:#CD2122;}div>a.read,.gallery.full-width .da-thumbs li .main div a.read{color:#CD2122;}.nivo-controlNav a:hover,.nivo-controlNav a.active{background:#CD2122;}.flex-caption.bottom .textp,.flex-caption.bottom .right .btcolor,.flex-caption.left .textp{background:#CD2122;}.flex-caption.left .textp{color:#fff;}.flex-caption.left .btcolor{background:#CD2122;}.flex-caption.bottom .textp:after{border-top-color:#CD2122;}#send_message,#send{background:#CD2122;}.sf-menu li a:hover:before{border-color: #CD2122 #CD2122 transparent transparent;}.sf-menu li a:hover:after{border-top:10px solid #CD2122;}.circleright{border-top-color:#CD2122;border-right-color:#CD2122;border-bottom-color:#CD2122;}a.active-button{background:#CD2122;}div.node{background-color:#CD2122;}.people span.post{color:#CD2122;}.buttonred:hover,.ca-content-wrapper{background-color:#CD2122;}.list li:hover span,span.drop,.post-info a span.icon-comment,.post-info a.post-read,ul.catagories li:hover a,ul.bullet-list li span,a.toggle_trigger span{color:#CD2122;}.search input.submit,.mailchimp a,.blog-post:hover .post-contant,.widget-controls .flex-direction-nav li a:hover,.tags a:hover:after,.tags a:hover,ul.catagories li:hover span,.accordion a.current,.toggle_trigger.toggle_active,.tabs li a.current,.home-tab .tabs:after,.pricing_table_wdg ul.bestb li:last-child a,.pricing_table_wdg ul li:last-child:hover a{background-color:#CD2122;}.pricing_table_wdg ul.bestb{border-color:#CD2122;}");
+/*****************************/
+
+div.flex-caption.left .textp{
+background:#CD2122;
+color:#fff;
+}
+
+
+.flex-caption.bottom .textp{
+background:#CD2122;
+color:#fff;
+}
+.flex-caption.bottom .textp:after{
+border-right:2px solid #CD2122;
+}
+
+
+
+
+
+.flex-caption.bottom .right .btcolor{
+color:#fff;
+background:#CD2122;
+
+}
+
+
+
+/************* caption left **************/
+
+
+.flex-caption.left .textp{
+background:#CD2122;
+color:#fff;
+position:relative;
+}
+
+
+
+.flex-caption.left .textp h2 {
+text-shadow:0 2px 2px rgba(255,255,255,0.2);
+}
+
+
+
+.flex-caption.left .textp p{
+
+text-shadow:0 3px 2px rgba(255,255,255,0.2);
+}
+
+.flex-caption.left .btcolor {
+  background: none repeat scroll 0 0 #CD2122;
+  color: #FFFFFF;
+}

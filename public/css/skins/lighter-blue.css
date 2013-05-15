@@ -1,0 +1,60 @@
+#header.bg{
+background-color:#1BC4DE;
+}
+
+
+#header.bg,.sort a.current_link{background-color:#1BC4DE;}.service-block:hover{background-color:#1BC4DE}section.social ul li a.facebook:hover{background:#1BC4DE;}section.social ul li a.twitter:hover{background:#1BC4DE;}section.social ul li a.google-plus:hover{background:#1BC4DE;}.flex control-paging li a.flex-active{background:#1BC4DE;}.da-thumbs li .main div{background-color:#1BC4DE;}.recent-blog .containt:hover{background-color:#1BC4DE;}.flex-control-paging li a.flex-active{background-color:#1BC4DE;}.flex-control-paging li a:hover{background-color:#1BC4DE;}#bx-pager{border-top:2px solid #1BC4DE;}#bx-pager a.active:before{border-top-color:#1BC4DE;}.bx-wrapper .bx-prev:hover{background-color:#1BC4DE}.bx-wrapper .bx-next:hover{background-color:#1BC4DE}#footer .footer-widget ul.list li a:before{background-color:#1BC4DE;}#footer .footer-widget ul.list li a:hover:before{background-color:#1BC4DE;color:#1BC4DE;}#footer .footer-widget ul.list li a:hover{color:#1BC4DE;}.carousel .next:hover, .carousel .prev:hover,a.submit,.bottom-footer,.sf-menu li a:hover{background-color:#1BC4DE;}.bx-wrapper li a span{color:#1BC4DE;}#footer,#footer .footer-widget h4:before{border-top-color:#1BC4DE;}.sf-menu li li:hover .icon span{color:#1BC4DE;}.sf-menu a, .sf-menu a:visited{color:#1BC4DE;}.sf-menu li a{color:#1BC4DE;}.sf-menu .sfHover>a{color:#fff;background:#1BC4DE;}.sf-menu li li{background:#1BC4DE;}.stylish>span,div.comment-cout,.arrow-circle{background-color:#1BC4DE;}.halfCircleBottom,.halfCircleright{border-color:#1BC4DE;}div>a.read,.gallery.full-width .da-thumbs li .main div a.read{color:#1BC4DE;}.nivo-controlNav a:hover,.nivo-controlNav a.active{background:#1BC4DE;}.flex-caption.bottom .textp,.flex-caption.bottom .right .btcolor,.flex-caption.left .textp{background:#1BC4DE;}.flex-caption.left .textp{color:#fff;}.flex-caption.left .btcolor{background:#1BC4DE;}.flex-caption.bottom .textp:after{border-top-color:#1BC4DE;}#send_message,#send{background:#1BC4DE;}.sf-menu li a:hover:before{border-color: #1BC4DE #1BC4DE transparent transparent;}.sf-menu li a:hover:after{border-top:10px solid #1BC4DE;}.circleright{border-top-color:#1BC4DE;border-right-color:#1BC4DE;border-bottom-color:#1BC4DE;}a.active-button{background:#1BC4DE;}div.node{background-color:#1BC4DE;}.people span.post{color:#1BC4DE;}.buttonred:hover,.ca-content-wrapper{background-color:#1BC4DE;}.list li:hover span,span.drop,.post-info a span.icon-comment,.post-info a.post-read,ul.catagories li:hover a,ul.bullet-list li span,a.toggle_trigger span{color:#1BC4DE;}.search input.submit,.mailchimp a,.blog-post:hover .post-contant,.widget-controls .flex-direction-nav li a:hover,.tags a:hover:after,.tags a:hover,ul.catagories li:hover span,.accordion a.current,.toggle_trigger.toggle_active,.tabs li a.current,.home-tab .tabs:after,.pricing_table_wdg ul.bestb li:last-child a,.pricing_table_wdg ul li:last-child:hover a{background-color:#1BC4DE;}.pricing_table_wdg ul.bestb{border-color:#1BC4DE;}");
+/*****************************/
+
+div.flex-caption.left .textp{
+background:#1BC4DE;
+color:#fff;
+}
+
+
+.flex-caption.bottom .textp{
+background:#1BC4DE;
+color:#fff;
+}
+.flex-caption.bottom .textp:after{
+border-right:2px solid #1BC4DE;
+}
+
+
+
+
+
+.flex-caption.bottom .right .btcolor{
+color:#fff;
+background:#1BC4DE;
+
+}
+
+
+
+/************* caption left **************/
+
+
+.flex-caption.left .textp{
+background:#1BC4DE;
+color:#fff;
+position:relative;
+}
+
+
+
+.flex-caption.left .textp h2 {
+text-shadow:0 2px 2px rgba(255,255,255,0.2);
+}
+
+
+
+.flex-caption.left .textp p{
+
+text-shadow:0 3px 2px rgba(255,255,255,0.2);
+}
+
+.flex-caption.left .btcolor {
+  background: none repeat scroll 0 0 #1BC4DE;
+  color: #FFFFFF;
+}

@@ -20,6 +20,8 @@ set :deploy_to, '/var/www/wasteblue'
 
 set :current, "#{deploy_to}/current"
 
+set :normalize_asset_timestamps, false
+
 role :web, application
 role :app, application
 role :db,  application, primary: true

@@ -39,8 +39,8 @@ namespace :deploy do
   end
 
   task :stop do
-    # vamos fazer de outra forma entao hehehehehe (66) fiquei louco agora isso nao rodaria nem a pau rsrs perai vou pensar Zzz abre outra aba ai please
-    run "if [ -e /var/www/wasteblue/shared/pids/unicorn.pid ]; then kill `cat /var/www/wasteblue/shared/pids/unicorn.pid`; fi;"
+   
+    run "if [ -e /var/www/ifollow/shared/pids/unicorn.pid ]; then kill `cat /var/www/ifollow/shared/pids/unicorn.pid`; fi;"
   end
 
   task :restart do
@@ -48,4 +48,3 @@ namespace :deploy do
     start
   end
 end
-

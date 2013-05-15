@@ -36,7 +36,6 @@ production:
   encoding: utf8
   reconnect: false
   database: wasteblue
-  pool: 5
   username: root
   password: rub32912289
   socket: /var/run/mysqld/mysqld.sock

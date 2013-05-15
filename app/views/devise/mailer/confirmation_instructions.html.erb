@@ -1,0 +1,5 @@
+<p>Bem vindo <%= @email %>!</p>
+
+<p>Você pode ativar o seu cadastro no link abaixo:</p>
+
+<p><%= link_to 'Confirmar conta', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

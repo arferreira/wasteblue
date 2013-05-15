@@ -1,6 +1,60 @@
-		<section class="span8">
+
+	<% if user_signed_in? %>
+
+
+	<section class="span8">
 		
-			<nav>
+				<nav>
+					<ul class="sf-menu">
+					
+
+						
+						<li class="home">
+						<a  data-description="" href="">Anúncie
+						<span class=""></span>
+						<span class="border"></span>
+						</a>
+						
+						
+						</li>
+						
+						              
+						<li>
+							<a href="#" data-description="">Minha Conta 
+								<span class=""></span>
+							<span class="border"></span></a>
+						
+
+						</li>
+
+						<li>
+							<a href="#" data-description="">Meus Anúncios 
+								<span class=""></span>
+							<span class="border"></span></a>
+						
+
+						</li>
+
+
+                                              
+						<li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>   </span>						
+						<span class="border"></span>
+						</a></li>
+						
+					</ul>
+				</nav>	
+			
+		   </section>
+
+
+
+		<% else %>
+
+		<!-- Quando o usuario nao estiver logado apresentar este menu -->
+
+			<section class="span8">
+		
+				<nav>
 					<ul class="sf-menu">
 					
 
@@ -24,9 +78,9 @@
 						</li>
 
 						<li>
-							<a href="#" data-description="">Cadastre-se 
+							<%= link_to('Cadastre-se', new_user_registration_path)  %> 
 								<span class=""></span>
-							<span class="border"></span></a>
+							<span class="border"></span>
 						
 
 						</li>
@@ -35,9 +89,11 @@
                                               
 						<li><%= link_to "Contato", :controller => :contato, :action => :index %></span>						
 						<span class="border"></span>
-						</a></li>
+						</li>
 						
 					</ul>
-			</nav>	
+				</nav>	
 			
-		</section>
+		   </section>
+
+		<% end %>

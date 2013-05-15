@@ -8,16 +8,16 @@ class PagesController < ApplicationController
 # @author: Antonio Ricardo _(MoSh)_
 # contem todas as actions para as views principais
 ##
-
+   # before_filter :authenticate_user!
    
 
    # actions do controller pages
 
 	def index
 		
+
 	end # final da action index
 
-	
 
 	def quemsomos
 		

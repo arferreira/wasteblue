@@ -4,7 +4,7 @@ gem 'rails'
 gem 'mysql2'
 gem 'devise'
 gem "recaptcha", require: "recaptcha/rails"
-
+gem 'devise'
 
 group :development do
   gem 'capistrano'

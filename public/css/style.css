@@ -4857,3 +4857,18 @@ div.usquare_square_bg9 {
   background-color: #00a0db;
 }
 
+.padrao_box
+{
+  width:100%; 
+  background:#F8F8F8;  
+  margin-top:35px; 
+  padding:30px;
+}
+.content_padrao
+{
+  width:40%; 
+  padding:10px; 
+  margin-left:140px;
+
+}
+.content_padrao h2{ color: #00a0db;}

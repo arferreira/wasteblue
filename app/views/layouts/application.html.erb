@@ -62,7 +62,13 @@
 		<div class="inner-header">
 		
 		<div class="span4">
-		<h3><a href="" class="logo"><img src="/images/logo.png" alt="" /></a></h3>
+		<h3>
+
+			<%= link_to image_tag('/images/logowb.png'), root_path%>
+			
+			<!--<a href="" class="logo"><img src="/images/logowb.png" alt="" />
+
+			</a>--></h3>
 		</div>
 		
 		<%= render 'shared/menu' %>
@@ -131,7 +137,7 @@
 					<li><a href="#">Parceiros</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Imprensa</a></li>
-					<li><a href="#">Contato</a></li>
+					<li><%= link_to "Contato", :controller => :contato, :action => :index %></li>
 				</ul>			
 			</div>
 			

@@ -64,7 +64,7 @@
 		<div class="span4">
 		<h3>
 
-			<%= link_to image_tag('/images/logowb.png'), root_path%>
+			<%= link_to image_tag('/images/logowb.png'), root_path %>
 			
 			<!--<a href="" class="logo"><img src="/images/logowb.png" alt="" />
 
@@ -132,11 +132,11 @@
 				<div class="clear"></div>
 				
 				<ul class="list">
-					<li><a href="#">A WasteBlue</a></li>
-					<li><a href="#">Quem Somos</a></li>
-					<li><a href="#">Parceiros</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Imprensa</a></li>
+					<li><%= link_to "A WasteBlue", :controller => :awasteblue, :action => :view %></li>
+					<li><%= link_to "Quem somos", :controller => :about	, :action => :view %></li>
+					<li><%= link_to "Parceiros", :controller => :partners, :action => :view %></li>
+					<li><%= link_to "Blog", :controller => :blog, :action => :index %></li>
+					<li><%= link_to "Imprensa", :controller => :press, :action => :view %></li>
 					<li><%= link_to "Contato", :controller => :contato, :action => :index %></li>
 				</ul>			
 			</div>
@@ -190,9 +190,9 @@
 		 	<div class="row">
 				
 				<div class="link-list span6">
-					<a href="pages/termosdeuso">Termos de uso</a>
-					<a href="pages/politica">Politica de privacidade</a>
-					<a href="pages/faq">FAQs</a>
+					<%= link_to "Termos de Uso", :controller => :terms, :action => :view %>
+					<%= link_to "Politica de Privacidade", :controller => :policy, :action => :view %>
+					<%= link_to "FAQs", :controller => :faq, :action => :view %>
 					
 				</div>	
 				
@@ -355,15 +355,6 @@
 		
 
 	
-		<!--Start of Zopim Live Chat Script-->
-	<script type="text/javascript">
-	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-	d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-	_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-	$.src='http://cdn.zopim.com/?1CHThwwgpaDcwGmUunRibdoKmnYVNBpd';z.t=+new Date;$.
-	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-	</script>
-	<!--End of Zopim Live Chat Script-->
 
 	
  

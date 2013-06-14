@@ -10,10 +10,7 @@
 
 						
 						<li class="home">
-						<a  data-description="" href="">Anúncie
-						<span class=""></span>
-						<span class="border"></span>
-						</a>
+						<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
 						
 						
 						</li>
@@ -37,7 +34,7 @@
 
 
                                               
-						<li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>   </span>						
+						<li> <%= link_to('Sair', destroy_user_session_path, :method => :delete) %>   </span>						
 						<span class="border"></span>
 						</a></li>
 						
@@ -60,28 +57,16 @@
 
 						
 						<li class="home">
-						<a  data-description="" href="">Anúncie
-						<span class=""></span>
-						<span class="border"></span>
-						</a>
-						
-						
+						<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
 						</li>
 
 						<li>
-						<a  data-description="" href="">Anúncios
-						<span class=""></span>
-						<span class="border"></span>
-						</a>
-						
-						
+						<%= link_to 'Anúncios', :controller => :ads, :action => :all %>
 						</li>
 						
 						              
 						<li>
-							<a href="#" data-description="">Como funciona 
-								<span class=""></span>
-							<span class="border"></span></a>
+							<%= link_to 'Como funciona', :controller => :howto, :action => :index %>
 						
 
 						</li>

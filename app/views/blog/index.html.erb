@@ -1,0 +1,151 @@
+<div class="clear"></div>
+	
+	
+		<div class="inner-head">
+		<div class="container">
+		<div class="row">
+			<div class="span6">
+				<h3>Últimas postagens do blog</h3>
+			</div>
+			<div class="span6">
+				<div class="search_box">
+				<input type="text"  value="Search " class="search-heading" />
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		
+	<div class="clear"></div>
+	
+	<div class="container">
+	
+	<div class="row">
+		
+<div class="container">
+	
+		<div class="row">
+
+			<div class="clear"></div>
+			
+		<section class="blog span8">
+			
+			<% @posts.each do |p| %>
+
+
+			<article class="blog-post">
+			<img alt="post one" src="/files/post1.jpg">
+				<div class="post-contant">
+				<div class="comment">
+				<div class="comment-cout">
+						<h5 class="date">20</h5>
+						<div class="clear"></div>
+						<h6 class="month">June</h6>
+					</div>
+				</div>
+			<h3><%= p.title %></h3>
+			<p>Sed sollicitudin hendrerit urna, id euismod urna convallis eget. Vivamus cursus iaculis urna a auctor. Phasellus consequat, mauris sit amet faucibus pretium, dui lorem euismod eros, ut imperdiet sem nisi a elit. Aenean orci tellus, facilisis eu volutpat ac, placerat a nunc. Phasellus sit amet neque nibh. Nulla ac sapien ut ligula eleifend suscipit a ut nisi. </p>
+				</div>			
+			<div class="clear"></div>
+			<div class="post-info">
+				<span>Autor:</span>
+				<a href="#"><%= p.author %>,</a>
+				<a href="#"><span class="icon-comment"></span> 6 Comment</a>
+				<a class="post-read" href="#">Continue lendo...</a>
+			</div>
+			</article>
+			<% end %>
+			
+		</section>
+			
+		<aside class="span4" id="sidebar">
+		<div class="sidebar-widget">
+			<div class="search">
+			<input type="text" value="Buscar no blog">
+			<input type="submit" class="submit">
+			</div>
+		</div>
+		
+		<div class="sidebar-widget">
+			<div class="simple-text">
+				<h4>Assuntos relacionados</h4>
+				<p>Estaremos municiando nosso blog todos os dias com assuntos realmente relacionados ao mercado de resíduos ambientais.</p>
+			</div>
+		</div>
+		
+		<div class="sidebar-widget">
+		<div class="mailchimp">
+		<a href="http://eepurl.com/vGsWT">Assine nosso feed!</a>
+		</div>
+		</div>
+		
+		<div class="sidebar-widget">
+			<h4>Categorias</h4>
+			
+			<ul class="catagories">
+				<li>
+				<span class="icon-globe"></span>
+				<a href="#">web design</a>
+				</li>
+				
+				<li>
+				<span class="icon-wrench"></span>
+				<a href="#">Development</a>
+				</li>
+				
+			</ul>
+		</div>
+		
+		<div class="sidebar-widget">
+			<div class="widget-slider">
+				<h4>Últimos Anúncios</h4>
+	
+						
+			<div class="widget-controls align-right"><ul class="flex-direction-nav"><li><a href="#" class="flex-prev">Previous</a></li><li><a href="#" class="flex-next">Next</a></li></ul></div>
+	
+					<div class="widget widget-slider">
+				<div class="flexslider2 flexslider" id="flex-widget">
+					<ul class="slides">
+						<li><img src="/files/sw1.png" alt="" /></li>
+						<li><img src="/files/sw1.png" alt="" /></li>
+						<li><img src="/files/sw1.png" alt="" /></li>
+					</ul>
+				</div>
+				
+				</div>
+			</div>
+				
+		</div>
+			
+		
+		<div class="sidebar-widget">
+			<div class="tags-block">
+				<h4>Tags</h4>
+				<p class="tags custom">
+      <a href="#">awesome</a>
+      <a class="tag-blue" href="#">free</a>
+      <a class="tag-orange inset" href="#">ie sucks</a>
+      <a class="tag-red" href="#">tags cloud</a>
+      <a class="tag-blue inset" href="#">jsfiddle</a>
+      <a class="inset" href="#">tags</a>
+      <a class="tag-orange" href="#">pure css</a>
+      <a class="tag-red inset" href="#">webdesign</a>
+	</p>
+			</div>
+		</div>		
+			
+		</aside>
+
+	</div>
+		
+	<div class="clear"></div>
+	
+	</div>
+		
+</div><!-- end of row -->
+	
+        
+    
+</div><!-- end of container -->
+
+<div class="clear"></div>

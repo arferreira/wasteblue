@@ -24,25 +24,24 @@ Wasteblue::Application.routes.draw do
 
   resources :posts
 
-
+  get "contato/index"
+  get "construction/index"
+  
+  devise_for :legal_entities
   devise_for :users
 
-  get "contato/index"
-
-  get "construction/index"
-
+  devise_scope :legal_entity do
+    get 'pessoa_juridica/sign_in', :to => 'devise/sessions#new', :as => :new_legal_entity_session
+    get 'pessoa_juridica/sign_up', :to => 'devise/registrations#new', :as => :new_legal_entity_registration
+    get 'pessoa_juridica/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_legal_entity_session
+  end
 
   devise_scope :user do
-  
-  get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
-
-  get 'sign_up', :to => 'devise/registrations#new', :as => :new_user_registration
-
-  get 'users/sign_up', :to => 'devise/registrations#new', :as => :new_user_registration
-  
-  get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  
+    get 'pessoa_fisica/sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+    get 'pessoa_fisica/sign_up', :to => 'devise/registrations#new', :as => :new_user_registration
+    get 'pessoa_fisica/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

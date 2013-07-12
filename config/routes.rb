@@ -14,7 +14,7 @@ Wasteblue::Application.routes.draw do
 
   get "awasteblue/view"
 
-  get "awasteblue/login"
+  get "login" => "awasteblue#login"
 
   get "ads/all"
 

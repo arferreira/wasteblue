@@ -24,7 +24,7 @@
 
 <section class="login login_juridica">
   <h4>Pessoa Juridica</h4>
-  <%= form_for(resource_entity, :as => resource_name_entity, :url => session_path(resource_name)) do |f| %>
+  <%= form_for(resource_entity, :as => resource_name_entity, :url => session_path(resource_name_entity)) do |f| %>
     <div><%= f.label :email, :style => "font-weight:bold;" %><br />
     <%= f.email_field :email, :style => "width: 300px; height:30px; border:1px solid #00a0db;",:placeholder => "digite o seu email", :autofocus => true %></div>
 

@@ -13,14 +13,14 @@ module AwasteblueHelper
 
   #Gambi pra funcionar 2 form pra login
   def resource_name_entity
-    :entity
+    :legal_entity
   end
 
   def resource_entity
-    @resource ||= Entity.new
+    @resource ||= LegalEntity.new
   end
 
   def devise_mapping_entity
-    @devise_mapping ||= Devise.mappings[:entity]
+    @devise_mapping ||= Devise.mappings[:legal_entity]
   end
 end

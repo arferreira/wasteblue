@@ -1,98 +1,54 @@
-
-	<% if user_signed_in? %>
-
-
-	<section class="span8">
-		
-				<nav>
-					<ul class="sf-menu">
-					
-
-						
-						<li class="home">
-						<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
-						
-						
-						</li>
-						
-						              
-						<li>
-							<a href="#" data-description="">Minha Conta 
-								<span class=""></span>
-							<span class="border"></span></a>
-						
-
-						</li>
-
-						<li>
-							<a href="#" data-description="">Meus Anúncios 
-								<span class=""></span>
-							<span class="border"></span></a>
-						
-
-						</li>
-
-
-                                              
-						<li> <%= link_to('Sair', destroy_user_session_path, :method => :delete) %>   </span>						
+<% if user_signed_in? %>
+	<section class="span8">		
+		<nav>
+			<ul class="sf-menu">						
+				<li class="home">
+					<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
+				</li>
+				<li>
+					<a href="#" data-description="">Minha Conta 
+						<span class=""></span>
+					<span class="border"></span></a>
+				</li>
+				<li>
+					<a href="#" data-description="">Meus Anúncios 
+						<span class=""></span>
 						<span class="border"></span>
-						</a></li>
-						
-					</ul>
-				</nav>	
-			
-		   </section>
-
-
-
-		<% else %>
-
-		<!-- Quando o usuario nao estiver logado apresentar este menu -->
-
-			<section class="span8">
-		
-				<nav>
-					<ul class="sf-menu">
-					
-
-						
-						<li class="home">
-						<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
-						</li>
-
-						<li>
-						<%= link_to 'Anúncios', :controller => :ads, :action => :all %>
-						</li>
-						
-						              
-						<li>
-							<%= link_to 'Como funciona', :controller => :howto, :action => :index %>
-						
-
-						</li>
-
-						<li>
-							<%= link_to('Cadastrar', new_user_registration_path)  %> 
-								<span class=""></span>
-							<span class="border"></span>
-						
-
-						</li>
-
-						<li>
-							<%= link_to('Login', new_user_session_path)  %> 
-								<span class=""></span>
-							<span class="border"></span>
-						
-
-						</li>
-
-
-                                              
-						
-					</ul>
-				</nav>	
-			
-		   </section>
-
-		<% end %>
+					</a>
+				</li>
+				<li> 
+					<%= link_to('Sair', destroy_user_session_path, :method => :delete) %>
+					<span class="border"></span>
+				</li>
+				
+			</ul>
+		</nav>	
+   </section>
+<% else %>
+	<!-- Quando o usuario nao estiver logado apresentar este menu -->
+	<section class="span8">
+		<nav>
+			<ul class="sf-menu">
+				<li class="home">
+					<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
+				</li>
+				<li>
+					<%= link_to 'Anúncios', :controller => :ads, :action => :all %>
+				</li>
+				<li>
+					<%= link_to 'Como funciona', :controller => :howto, :action => :index %>
+				</li>
+				<li>
+					<%= link_to('Cadastrar', new_user_registration_path)  %> 
+					<span class=""></span>
+					<span class="border"></span>
+				</li>
+				<li>
+					<%= link_to('Login', new_user_session_path)  %> 
+					<span class=""></span>
+					<span class="border"></span>
+				</li>
+			</ul>
+		</nav>	
+	</section>
+<% end %>

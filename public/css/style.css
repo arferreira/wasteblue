@@ -4871,4 +4871,18 @@ div.usquare_square_bg9 {
   margin-left:140px;
 
 }
-.content_padrao h2{ color: #00a0db;}
+.form_padrao h2,.content_padrao h2{ color: #00a0db;}
+
+.form_padrao{
+  display: table;
+  width: 80%;
+  padding: 10px;
+  margin-left: 20px;
+}
+.login{
+  float: left;
+  margin-right: 50px;
+}
+.login:first-child{
+  margin-left: 130px;
+}

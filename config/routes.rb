@@ -14,6 +14,8 @@ Wasteblue::Application.routes.draw do
 
   get "awasteblue/view"
 
+  get "awasteblue/login"
+
   get "ads/all"
 
   get "advertise/index"

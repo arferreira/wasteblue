@@ -4,6 +4,9 @@
     <% if legal_entity_signed_in? %>
       <%= link_to "Anunciar", "/pessoa_juridica/conta/#{current_legal_entity.id}/editar", :class => "btn btn-success" %>
       <%= link_to "Editar Perfil", "/pessoa_juridica/conta/#{current_legal_entity.id}/editar", :class => "btn btn-primary" %>
+      <% unless @legal_entity.formulario_completo? %>
+        <%= link_to "Completar Cadastro", "/pessoa_juridica/conta/#{current_legal_entity.id}/editar", :class => "btn btn-danger" %>
+      <% end %>
     <% end %>
     <header>
       <h3>Dados do Usuario</h3>

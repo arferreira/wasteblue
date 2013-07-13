@@ -32,7 +32,9 @@ Wasteblue::Application.routes.draw do
 
   get "blog/index"
 
+  resources :legal_entities
   resources :posts
+  resources :users
 
   get "contato/index"
   get "construction/index"

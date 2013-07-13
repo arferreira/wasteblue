@@ -1,2 +1,18 @@
-<h1>LegalEntities#show</h1>
-<p>Find me in app/views/legal_entities/show.html.erb</p>
+<div class="padrao_box">
+  <div class="form_padrao">
+    <h1>Meu Perfil</h1>
+    <% if legal_entity_signed_in? %>
+      <%= link_to "Anunciar", "/pessoa_juridica/conta/#{current_legal_entity.id}/editar", :class => "btn btn-success" %>
+      <%= link_to "Editar Perfil", "/pessoa_juridica/conta/#{current_legal_entity.id}/editar", :class => "btn btn-primary" %>
+    <% end %>
+    <header>
+      <h3>Dados do Usuario</h3>
+    </header>
+    <article>
+      <div>
+        <label><strong>Email:</strong></label>
+        <p><%= @legal_entity.email %></p>
+      </div>
+    </article>
+  </div>
+</div>

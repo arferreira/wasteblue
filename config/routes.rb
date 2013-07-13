@@ -55,6 +55,9 @@ Wasteblue::Application.routes.draw do
   match 'pessoa_juridica/conta/:id' => 'legal_entities#show'
   match 'pessoa_fisica/conta/:id' => 'users#show'
 
+  match 'pessoa_juridica/conta/:id/editar' => 'legal_entities#edit'
+  match 'pessoa_fisica/conta/:id/editar' => 'users#edit'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

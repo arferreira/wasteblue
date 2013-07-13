@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130712174029) do
+ActiveRecord::Schema.define(:version => 20130713183004) do
 
   create_table "legal_entities", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(:version => 20130712174029) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "company_name"
+    t.string   "fancy_name"
+    t.string   "cnpj"
+    t.string   "area_of_activity"
+    t.string   "website"
+    t.string   "waste_generated"
+    t.integer  "waste_id"
+    t.string   "type_of_company"
   end
 
   add_index "legal_entities", ["email"], :name => "index_legal_entities_on_email", :unique => true
@@ -57,6 +65,15 @@ ActiveRecord::Schema.define(:version => 20130712174029) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
+    t.string   "cpf"
+    t.string   "telephone_home"
+    t.string   "telephone_cell"
+    t.string   "address"
+    t.string   "district"
+    t.string   "city"
+    t.string   "state"
+    t.string   "postal_code"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

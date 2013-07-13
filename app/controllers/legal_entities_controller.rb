@@ -15,7 +15,7 @@ class LegalEntitiesController < ApplicationController
     @legal_entity = LegalEntity.find(params[:id])
 
     respond_to do |format|
-      if @legal_entity.update_attributes(params[:company])
+      if @legal_entity.update_attributes(params[:legal_entity])
         format.html { redirect_to @legal_entity, notice: 'Company was successfully updated.' }
         format.json { head :no_content }
       else

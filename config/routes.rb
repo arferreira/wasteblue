@@ -1,5 +1,9 @@
 Wasteblue::Application.routes.draw do
  
+  get "legal_entities/show"
+
+  get "legal_entities/index"
+
   get "faq/view"
 
   get "policy/view"
@@ -44,6 +48,7 @@ Wasteblue::Application.routes.draw do
     get 'pessoa_fisica/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
+  match 'pessoa_juridica/conta/:id' => 'legal_entities#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

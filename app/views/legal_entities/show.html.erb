@@ -8,14 +8,135 @@
         <%= link_to "Completar Cadastro", "/pessoa_juridica/conta/#{current_legal_entity.id}/editar", :class => "btn btn-danger" %>
       <% end %>
     <% end %>
-    <header>
-      <h3>Dados do Usuario</h3>
-    </header>
-    <article>
-      <div>
-        <label><strong>Email:</strong></label>
-        <p><%= @legal_entity.email %></p>
-      </div>
-    </article>
+    <section>
+      <header>
+        <h3>Dados do Usuario</h3>
+      </header>
+      <article>
+        <div>
+          <label>
+            <strong>Contato</strong>
+          </label>
+          <span><%= @legal_entity.contact_name %></span>
+        </div>
+        <div>
+          <label><strong>Email:</strong></label>
+          <span><%= @legal_entity.email %></span>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <header>
+        <h3>Telefones</h3>
+      </header>
+      <article>
+        <div>
+          <label>
+            <strong>Telefone</strong>
+          </label>
+          <span><%= @legal_entity.telephone_home %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Telefone Celular</strong>
+          </label>
+          <span><%= @legal_entity.telephone_cell %></span>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <header>
+        <h3>Dados da Empresa</h3>
+      </header>
+      <article>
+        <div>
+          <label>
+            <strong>Numero da Empresa</strong>
+          </label>
+          <span>#<%= @legal_entity.id %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Nome da Empresa</strong>
+          </label>
+          <span><%= @legal_entity.company_name %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Razão Social</strong>
+          </label>
+          <span><%= @legal_entity.fancy_name %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Nome Fantasia</strong>
+          </label>
+          <span><%= @legal_entity.fancy_name %></span>
+        </div>
+        <div>
+          <label>
+            <strong>CNPJ</strong>
+          </label>
+          <span><%= @legal_entity.cnpj %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Area de Atividade</strong>
+          </label>
+          <span><%= @legal_entity.area_of_activity %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Site</strong>
+          </label>
+          <span><%= @legal_entity.website %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Resíduos Gerados</strong>
+          </label>
+          <span><%= @legal_entity.waste_generated %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Tipo de Empresa</strong>
+          </label>
+          <span><%= @legal_entity.type_of_company %></span>
+        </div>
+      </article>
+    </section>
+    <section>
+      <header>
+        <h3>Endereço</h3>
+      </header>
+      <article>
+        <div>
+          <label>
+            <strong>Endereço</strong>
+          </label>
+          <span><%= @legal_entity.address %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Bairro</strong>
+          </label>
+          <span><%= @legal_entity.district %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Cidade</strong>
+          </label>
+          <span><%= @legal_entity.city %> - <%= @legal_entity.state %></span>
+        </div>
+        <div>
+          <label>
+            <strong>CEP</strong>
+          </label>
+          <span><%= @legal_entity.postal_code %></span>
+        </div>
+      </article>
+    </section>
   </div>
 </div>

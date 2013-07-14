@@ -8,4 +8,11 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
+
+  def formulario_completo?
+    unless self.name.blank? or self.telephone_home.blank? or self.telephone_cell.blank? or self.district.blank? or self.address.blank? or self.city.blank? or self.state.blank? or self.postal_code.blank? or self.email.blank? or self.waste_generated.blank? or self.type_of_company.blank?
+      return true
+    end
+      return false
+  end
 end

@@ -2,16 +2,84 @@
   <div class="form_padrao">
     <h1>Meu Perfil</h1>
     <% if user_signed_in? %>
+      <%= link_to "Anunciar", "/pessoa_fisica/conta/#{current_user.id}/editar", :class => "btn btn-success" %>
       <%= link_to "Editar Perfil", "/pessoa_fisica/conta/#{current_user.id}/editar", :class => "btn btn-primary" %>
+      <% unless @user.formulario_completo? %>
+        <%= link_to "Completar Cadastro", "/pessoa_fisica/conta/#{current_user.id}/editar", :class => "btn btn-danger" %>
+      <% end %>
     <% end %>
-    <header>
-      <h3>Dados do Usuario</h3>
-    </header>
-    <article>
-      <div>
-        <label><strong>Email:</strong></label>
-        <p><%= @user.email %></p>
-      </div>
-    </article>
+    <section>
+      <header>
+        <h3>Dados do Usuario</h3>
+      </header>
+      <article>
+        <div>
+          <label>
+            <strong>Contato</strong>
+          </label>
+          <span><%= @user.name %></span>
+        </div>
+        <div>
+          <label><strong>Email:</strong></label>
+          <span><%= @user.email %></span>
+        </div>
+        <div>
+          <label><strong>CPF:</strong></label>
+          <span><%= @user.cpf %></span>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <header>
+        <h3>Telefones</h3>
+      </header>
+      <article>
+        <div>
+          <label>
+            <strong>Telefone</strong>
+          </label>
+          <span><%= @user.telephone_home %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Telefone Celular</strong>
+          </label>
+          <span><%= @user.telephone_cell %></span>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <header>
+        <h3>Endereço</h3>
+      </header>
+      <article>
+        <div>
+          <label>
+            <strong>Endereço</strong>
+          </label>
+          <span><%= @user.address %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Bairro</strong>
+          </label>
+          <span><%= @user.district %></span>
+        </div>
+        <div>
+          <label>
+            <strong>Cidade</strong>
+          </label>
+          <span><%= @user.city %> - <%= @user.state %></span>
+        </div>
+        <div>
+          <label>
+            <strong>CEP</strong>
+          </label>
+          <span><%= @user.postal_code %></span>
+        </div>
+      </article>
+    </section>
   </div>
 </div>

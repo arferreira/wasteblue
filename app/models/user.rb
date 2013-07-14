@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me,  :name, :telephone_home, :telephone_cell, :address, :district, :city, :state, :postal_code, :cpf, :area_of_activity, :waste_generated, :website, :type_of_user
   # attr_accessible :title, :body
 
   def formulario_completo?

@@ -1,0 +1,67 @@
+<div class="padrao_box">
+  <div class="form_padrao">
+    <%= form_for @user do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div>
+        <%= f.label :telephone_home %>
+        <%= f.text_field :telephone_home %>
+      </div>
+      <div>
+        <%= f.label :telephone_cell %>
+        <%= f.text_field :telephone_cell %>
+      </div>
+      <div>
+        <%= f.label :address %>
+        <%= f.text_field :address %>
+      </div>
+      <div>
+        <%= f.label :district %>
+        <%= f.text_field :district %>
+      </div>
+      <div>
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+      </div>
+      <div>
+        <%= f.label :state %>
+        <%= f.text_field :state %>
+      </div>
+      <div>
+        <%= f.label :postal_code %>
+        <%= f.text_field :postal_code %>
+      </div>
+      
+      <div>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+      <div>
+        <%= f.label :cpf %>
+        <%= f.text_field :cpf %>
+      </div>
+      <div>
+        <%= f.label :area_of_activity %>
+        <%= f.text_field :area_of_activity %>
+      </div>
+      <div>
+        <%= f.label :waste_generated %>
+        <%= f.text_field :waste_generated %>
+      </div>
+      <div>
+        <%= f.label :website %>
+        <%= f.text_field :website %>
+      </div>
+      <div>
+        <%= f.label :type_of_company %>
+        <%= f.text_field :type_of_company %>
+      </div>
+
+      <div>
+        <%= f.submit "Salvar", :class => "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

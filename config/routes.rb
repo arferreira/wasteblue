@@ -1,8 +1,6 @@
 Wasteblue::Application.routes.draw do
  
   resources :purchasing_ads
-
-
   resources :sales_ads
 
 
@@ -65,6 +63,9 @@ Wasteblue::Application.routes.draw do
 
   match 'pessoa_juridica/conta/:id/editar' => 'legal_entities#edit'
   match 'pessoa_fisica/conta/:id/editar' => 'users#edit'
+
+  match 'pessoa_juridica/conta/:id/criar_anuncio/venda' => 'sales_ads#new', :as => :novo_anuncio_venda_juridica
+  match 'pessoa_fisica/conta/:id/criar_anuncio/venda' => 'sales_ads#new', :as => :novo_anuncio_venda_fisica
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

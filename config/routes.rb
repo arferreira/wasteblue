@@ -1,5 +1,8 @@
 Wasteblue::Application.routes.draw do
 
+  resources :categories
+
+
   get "users/show"
 
   get "users/index"

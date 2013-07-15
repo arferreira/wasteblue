@@ -1,5 +1,8 @@
 Wasteblue::Application.routes.draw do
  
+  resources :sales_ads
+
+
   get "users/show"
 
   get "users/index"

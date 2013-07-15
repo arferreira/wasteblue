@@ -1,0 +1,27 @@
+<h1>Listing sales_ads</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Category</th>
+    <th>User type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sales_ads.each do |sales_ad| %>
+  <tr>
+    <td><%= sales_ad.title %></td>
+    <td><%= sales_ad.category_id %></td>
+    <td><%= sales_ad.user_type %></td>
+    <td><%= link_to 'Show', sales_ad %></td>
+    <td><%= link_to 'Edit', edit_sales_ad_path(sales_ad) %></td>
+    <td><%= link_to 'Destroy', sales_ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sales ad', new_sales_ad_path %>

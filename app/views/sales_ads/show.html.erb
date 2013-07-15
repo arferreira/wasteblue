@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @sales_ad.title %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @sales_ad.category_id %>
+</p>
+
+<p>
+  <b>User type:</b>
+  <%= @sales_ad.user_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_sales_ad_path(@sales_ad) %> |
+<%= link_to 'Back', sales_ads_path %>

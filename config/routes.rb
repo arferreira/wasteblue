@@ -1,5 +1,8 @@
 Wasteblue::Application.routes.draw do
  
+  resources :purchasing_ads
+
+
   resources :sales_ads
 
 

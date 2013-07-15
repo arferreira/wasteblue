@@ -1,8 +1,4 @@
 Wasteblue::Application.routes.draw do
- 
-  resources :purchasing_ads
-  resources :sales_ads
-
 
   get "users/show"
 
@@ -36,10 +32,6 @@ Wasteblue::Application.routes.draw do
 
   get "blog/index"
 
-  resources :legal_entities
-  resources :posts
-  resources :users
-
   get "contato/index"
   get "construction/index"
   
@@ -64,8 +56,17 @@ Wasteblue::Application.routes.draw do
   match 'pessoa_juridica/conta/:id/editar' => 'legal_entities#edit'
   match 'pessoa_fisica/conta/:id/editar' => 'users#edit'
 
-  match 'pessoa_juridica/conta/:id/criar_anuncio/venda' => 'sales_ads#new', :as => :novo_anuncio_venda_juridica
-  match 'pessoa_fisica/conta/:id/criar_anuncio/venda' => 'sales_ads#new', :as => :novo_anuncio_venda_fisica
+  match 'pessoa_juridica/conta/:id/criar_anuncio/venda' => 'sales_ads#new'
+  match 'pessoa_fisica/conta/:id/criar_anuncio/venda' => 'sales_ads#new'
+
+  match 'pessoa_juridica/conta/:id/criar_anuncio/compra' => 'purchasing_ads#new'
+  match 'pessoa_fisica/conta/:id/criar_anuncio/compra' => 'purchasing_ads#new'
+
+  resources :legal_entities
+  resources :posts
+  resources :users
+  resources :sales_ads
+  resources :purchasing_ads
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -79,5 +80,4 @@ Wasteblue::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  match ':controller(/:action(/:id))(.:format)'
 end

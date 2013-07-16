@@ -1,4 +1,5 @@
 class SalesAdsController < ApplicationController
+  has_steps
   # GET /sales_ads
   # GET /sales_ads.json
   def index
@@ -39,35 +40,7 @@ class SalesAdsController < ApplicationController
 
   # POST /sales_ads
   # POST /sales_ads.json
-  def create
-    @sales_ad = SalesAd.new(params[:sales_ad])
-
-    respond_to do |format|
-      if @sales_ad.save
-        format.html { redirect_to @sales_ad, notice: 'Sales ad was successfully created.' }
-        format.json { render json: @sales_ad, status: :created, location: @sales_ad }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @sales_ad.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /sales_ads/1
-  # PUT /sales_ads/1.json
-  def update
-    @sales_ad = SalesAd.find(params[:id])
-
-    respond_to do |format|
-      if @sales_ad.update_attributes(params[:sales_ad])
-        format.html { redirect_to @sales_ad, notice: 'Sales ad was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @sales_ad.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  
 
   # DELETE /sales_ads/1
   # DELETE /sales_ads/1.json

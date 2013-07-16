@@ -1,6 +1,9 @@
 Wasteblue::Application.routes.draw do
 
   resources :categories
+  resources :sales_ads do
+    get :next_step, :on => :member
+  end
 
 
   get "users/show"

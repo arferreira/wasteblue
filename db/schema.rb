@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130716141810) do
+ActiveRecord::Schema.define(:version => 20130716171355) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -85,7 +85,11 @@ ActiveRecord::Schema.define(:version => 20130716141810) do
     t.string   "district"
     t.string   "state"
     t.string   "city"
+    t.string   "current_step"
+    t.string   "waste_name"
   end
+
+  add_index "purchasing_ads", ["current_step"], :name => "index_purchasing_ads_on_current_step"
 
   create_table "sales_ads", :force => true do |t|
     t.string   "title"

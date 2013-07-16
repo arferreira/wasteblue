@@ -1,6 +1,7 @@
+<h5>Escolha o residuo que deseja anunciar</h5>
 <div class="field">
-  <%= f.label :category_id %><br />
-  <%= f.text_field :category_id %>
+  <%= f.label "Categoria" %><br />
+  <%= f.select :category_id, @categories.collect { |c| [c.name, c.id] } %>
 </div>
 <div class="field">
   <%= f.label :waste_name %><br />

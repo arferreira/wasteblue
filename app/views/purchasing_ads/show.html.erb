@@ -1,20 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="padrao_box">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @purchasing_ad.title %>
-</p>
+        <p>
+          <b>Title:</b>
+          <%= @purchasing_ad.title %>
+        </p>
 
-<p>
-  <b>Category:</b>
-  <%= @purchasing_ad.category_id %>
-</p>
+        <p>
+          <b>Category:</b>
+          <%= @purchasing_ad.category_id %>
+        </p>
 
-<p>
-  <b>User type:</b>
-  <%= @purchasing_ad.user_type %>
-</p>
-
-
-<%= link_to 'Edit', edit_purchasing_ad_path(@purchasing_ad) %> |
-<%= link_to 'Back', purchasing_ads_path %>
+        <p>
+          <b>User type:</b>
+          <%= @purchasing_ad.user_type %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

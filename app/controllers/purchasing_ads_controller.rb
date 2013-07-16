@@ -26,6 +26,7 @@ class PurchasingAdsController < ApplicationController
   # GET /purchasing_ads/new.json
   def new
     @purchasing_ad = PurchasingAd.new
+    @categories = Category.all
 
     respond_to do |format|
       format.html # new.html.erb

@@ -6,4 +6,10 @@ class PurchasingAd < ActiveRecord::Base
     self.validates_presence_of :category_id
     self.validates_presence_of :waste_name
   end
+
+  def validate_title_details
+    self.validates_presence_of :title
+    self.validates_presence_of :waste_origin
+    self.validates_presence_of :details
+  end
 end

@@ -16,7 +16,10 @@
 </div>
 <div class="field">
   <%= f.label :show_price %><br />
-  <%= f.text_field :show_price %>
+  <label>Não</label>
+  <%= f.radio_button :show_price, false %>
+  <label>Sim</label>
+  <%= f.radio_button :show_price, true %>
 </div>
 <div class="field">
   <%= f.label :frequency_removal_waste %><br />

@@ -1,4 +1,5 @@
 class PurchasingAdsController < ApplicationController
+  has_steps
   # GET /purchasing_ads
   # GET /purchasing_ads.json
   def index

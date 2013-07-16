@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130715210311) do
+ActiveRecord::Schema.define(:version => 20130716133858) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -66,16 +66,50 @@ ActiveRecord::Schema.define(:version => 20130715210311) do
     t.string   "title"
     t.string   "category_id"
     t.string   "user_type"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "waste_origin"
+    t.string   "details"
+    t.string   "quantity"
+    t.string   "unit"
+    t.string   "unit_price"
+    t.string   "total_price"
+    t.boolean  "show_price"
+    t.string   "frequency_removal_waste"
+    t.string   "contract_time"
+    t.string   "today_waste"
+    t.string   "transportation_sample"
+    t.string   "waste_address"
+    t.string   "postal_code"
+    t.string   "address_complete"
+    t.string   "district"
+    t.string   "state"
+    t.string   "city"
   end
 
   create_table "sales_ads", :force => true do |t|
     t.string   "title"
     t.string   "category_id"
     t.string   "user_type"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "waste_origin"
+    t.string   "details"
+    t.string   "quantity"
+    t.string   "unit"
+    t.string   "unit_price"
+    t.string   "total_price"
+    t.boolean  "show_price"
+    t.string   "frequency_removal_waste"
+    t.string   "contract_time"
+    t.string   "today_waste"
+    t.string   "transportation_sample"
+    t.string   "waste_address"
+    t.string   "postal_code"
+    t.string   "address_complete"
+    t.string   "district"
+    t.string   "state"
+    t.string   "city"
   end
 
   create_table "taggings", :force => true do |t|

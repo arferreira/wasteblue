@@ -5,6 +5,10 @@ Wasteblue::Application.routes.draw do
     get :next_step, :on => :member
   end
 
+  resources :purchasing_ads do
+    get :next_step, :on => :member
+  end
+
 
   get "users/show"
 

@@ -19,6 +19,7 @@ class PurchasingAd < ActiveRecord::Base
     self.validates_presence_of :unit_price
     self.validates_presence_of :total_price
     self.validates_presence_of :show_price
+    self.validates_inclusion_of :show_price, :in => [true, false]
     self.validates_presence_of :frequency_removal_waste
     self.validates_presence_of :contract_time
   end

@@ -1,3 +1,14 @@
 <%= form_for(@purchasing_ad) do |f| %>
+  <% if @purchasing_ad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@purchasing_ad.errors.count, "error") %> prohibited this purchasing_ad from being saved:</h2>
+
+      <ul>
+      <% @purchasing_ad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <%= stepper f %>
 <% end %>

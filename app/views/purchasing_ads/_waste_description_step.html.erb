@@ -6,16 +6,29 @@
 <div class="field">
   <%= f.label :waste_name %><br />
   <%= f.text_field :waste_name %>
+  <ul id="myTags"></ul>
 </div>
 <script>
+  $().ready(function(){
+    $("#myTags").tagit();
+  });
+
   $("#purchasing_ad_category_id").change(function(){
     $.ajax({
       url: "/done",
+      dataType: 'json',
       beforeSend: function() { alert("Começa") },
       data: {
         id:$(this).val(),
       },
-      success: function() { alert('Termina') }
+      success: function(data) {
+        $.each(data,function(key,value){
+          console.log(key+" - "+value.id + " - "+value.name+" ...")
+          $("#myTags").append("<li id="+value.id+">"+value.name+"</li>");
+        })
+        //var foo = eval(data)
+        //console.log(foo) 
+      }
     });
   });
 </script>

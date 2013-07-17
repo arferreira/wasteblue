@@ -85,6 +85,10 @@ class PurchasingAdsController < ApplicationController
 
   def done
     category = Category.find(params[:id])
-    render :nothing => true
+    @tags = category.tags
+    respond_to do |format|
+      format.js {render :nothing => true}
+      format.json {render :json => @tags}
+    end
   end
 end

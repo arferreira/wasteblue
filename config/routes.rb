@@ -9,6 +9,7 @@ Wasteblue::Application.routes.draw do
     get :next_step, :on => :member
   end
 
+  match "/done" => "purchasing_ads#done"
 
   get "users/show"
 

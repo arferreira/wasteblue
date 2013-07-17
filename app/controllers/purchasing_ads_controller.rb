@@ -82,4 +82,9 @@ class PurchasingAdsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def done
+    category = Category.find(params[:id])
+    render :nothing => true
+  end
 end

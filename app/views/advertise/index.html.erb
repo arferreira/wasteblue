@@ -7,14 +7,14 @@
         <div class="span3">
         <% if user_signed_in? %>
           <%= link_to "Anunciar Venda", "/pessoa_juridica/conta/#{current_user.id}/criar_anuncio/venda", :class => "btn btn-large btn-success" %>
-        <% else %>
+        <% elsif legal_entity_signed_in? %>
           <%= link_to "Anunciar Venda", "/pessoa_fisica/conta/#{current_legal_entity.id}/criar_anuncio/venda", :class => "btn btn-large btn-success" %>
         <% end %>
         </div>
         <div class="span3">
         <% if user_signed_in? %>
           <%= link_to "Anunciar Compra", "/pessoa_fisica/conta/#{current_user.id}/criar_anuncio/compra", :class => "btn btn-large btn-warning" %>
-        <% else %>
+        <% elsif legal_entity_signed_in? %>
           <%= link_to "Anunciar Compra", "/pessoa_fisica/conta/#{current_legal_entity.id}/criar_anuncio/compra", :class => "btn btn-large btn-warning" %>
         <% end %>
         </div>

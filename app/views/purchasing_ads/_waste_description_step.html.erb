@@ -7,3 +7,15 @@
   <%= f.label :waste_name %><br />
   <%= f.text_field :waste_name %>
 </div>
+<script>
+  $("#purchasing_ad_category_id").change(function(){
+    $.ajax({
+      url: "/done",
+      beforeSend: function() { alert("Começa") },
+      data: {
+        id:$(this).val(),
+      },
+      success: function() { alert('Termina') }
+    });
+  });
+</script>

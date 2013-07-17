@@ -22,12 +22,13 @@
         id:$(this).val(),
       },
       success: function(data) {
+        $("#myTags").find('li').remove();
         $.each(data,function(key,value){
           console.log(key+" - "+value.id + " - "+value.name+" ...")
           $("#myTags").append("<li id="+value.id+">"+value.name+"</li>");
+          
         })
-        //var foo = eval(data)
-        //console.log(foo) 
+        $("#myTags").tagit();
       }
     });
   });

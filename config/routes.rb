@@ -1,13 +1,7 @@
 Wasteblue::Application.routes.draw do
 
   resources :categories
-  resources :sales_ads do
-    get :next_step, :on => :member
-  end
-
-  resources :purchasing_ads do
-    get :next_step, :on => :member
-  end
+  resources :purchasing_ad_steps
 
   match "/done" => "purchasing_ads#done"
 

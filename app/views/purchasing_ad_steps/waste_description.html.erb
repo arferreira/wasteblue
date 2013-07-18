@@ -1,48 +1,63 @@
-<h5>Escolha o residuo que deseja anunciar</h5>
-<div class="field">
-  <%= f.label "Categoria:" %>
-  <%= f.select :category_id, [["Selecione uma categoria de resíduo", 0]]+ @categories.collect { |c| [c.name, c.id]}  %>
-</div>
-<div class="categorias field">
-  <%= f.label :waste_name, "Escolha um resíduo" %>
-  <ul id="myTags"></ul>
-</div>
-<div class="categorias field">
-  <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
-  <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
-</div>
-<script>
-  $().ready(function(){
-    
-  });
-  $("#purchasing_ad_category_id").change(function(){
-    $.ajax({
-      url: "/done",
-      dataType: 'json',
-      beforeSend: function() { alert("Começa") },
-      data: {
-        id:$(this).val(),
-      },
-      success: function(data) {
-        $("#myTags").tagit();
-        $("#myTags").find('li').remove();
-        $('.categorias').show();
-        $.each(data,function(key,value){
-          console.log(key+" - "+value.id + " - "+value.name+" ...")
-          $("#myTags").append("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+value.id+">"+value.name+"</li>");
-          
-        })
-      }
-    });
-  });
-  $("#purchasing_ad_category_id").bind("ajaxComplete", function(){
-    $('#purchasing_ad_waste_name').tagit();
-    $('#myTags li').on('click',function(){
-      var thisid = $(this).attr('id')
-      var thistext = $(this).text()
-      console.log(thisid + thistext);
-      $('#purchasing_ad_waste_name').prepend("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+thisid+">"+thistext+"</li>")
-    });
-  });
+<%= form_for(@purchasing_ad) do |f| %>
+  <% if @purchasing_ad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@purchasing_ad.errors.count, "error") %> prohibited this purchasing_ad from being saved:</h2>
+
+      <ul>
+      <% @purchasing_ad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   
-</script>
+  <h5>Escolha o residuo que deseja anunciar</h5>
+  <div class="field">
+    <%= f.label "Categoria:" %>
+    <%= f.select :category_id, [["Selecione uma categoria de resíduo", 0]]+ @categories.collect { |c| [c.name, c.id]}  %>
+  </div>
+  <div class="categorias field">
+    <%= f.label :waste_name, "Escolha um resíduo" %>
+    <ul id="myTags"></ul>
+  </div>
+  <div class="categorias field">
+    <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
+    <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
+  </div>
+<% end %>
+
+  <script>
+    $().ready(function(){
+      
+    });
+    $("#purchasing_ad_category_id").change(function(){
+      $.ajax({
+        url: "/done",
+        dataType: 'json',
+        beforeSend: function() { alert("Começa") },
+        data: {
+          id:$(this).val(),
+        },
+        success: function(data) {
+          $("#myTags").tagit();
+          $("#myTags").find('li').remove();
+          $('.categorias').show();
+          $.each(data,function(key,value){
+            console.log(key+" - "+value.id + " - "+value.name+" ...")
+            $("#myTags").append("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+value.id+">"+value.name+"</li>");
+            
+          })
+        }
+      });
+    });
+    $("#purchasing_ad_category_id").bind("ajaxComplete", function(){
+      $('#purchasing_ad_waste_name').tagit();
+      $('#myTags li').on('click',function(){
+        var thisid = $(this).attr('id')
+        var thistext = $(this).text()
+        console.log(thisid + thistext);
+        $('#purchasing_ad_waste_name').prepend("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+thisid+">"+thistext+"</li>")
+      });
+    });
+    
+  </script>

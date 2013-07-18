@@ -1,4 +1,4 @@
-<%= form_for(@purchasing_ad) do |f| %>
+<%= form_for @purchasing_ad, url: wizard_path do |f| %>
   <% if @purchasing_ad.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@purchasing_ad.errors.count, "error") %> prohibited this purchasing_ad from being saved:</h2>
@@ -23,6 +23,9 @@
   <div class="categorias field">
     <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
     <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
+  </div>
+  <div class="actions">
+    <%= f.submit "Continue" %>
   </div>
 <% end %>
 

@@ -4953,3 +4953,6 @@ ul.tagit input[type="text"] {
     background-color: inherit;
     outline: none;
 }
+.categorias{
+  display: none;
+}

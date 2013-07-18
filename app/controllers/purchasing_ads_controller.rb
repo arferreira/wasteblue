@@ -47,6 +47,7 @@ class PurchasingAdsController < ApplicationController
    @categories = Category.all
     respond_to do |format|
      if @purchasing_ad.save
+          render :action => :new
   #      format.html { redirect_to @purchasing_ad, notice: 'Purchasing ad was successfully created.' }
   #      format.json { render json: @purchasing_ad, status: :created, location: @purchasing_ad }
      else

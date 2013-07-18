@@ -3,7 +3,7 @@
 		<nav>
 			<ul class="sf-menu">						
 				<li class="home">
-					<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
+					<%= link_to 'Anúncie', "/advertise/index" %>
 				</li>
 				<li>
 					<a href="/pessoa_fisica/conta/<%=current_user.id%>" data-description="">Minha Conta 
@@ -29,7 +29,7 @@
 		<nav>
 			<ul class="sf-menu">						
 				<li class="home">
-					<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
+					<%= link_to 'Anúncie', "/advertise/index" %>
 				</li>
 				<li>
 					<a href="/pessoa_juridica/conta/<%=current_legal_entity.id%>" data-description="">Minha Conta 
@@ -56,13 +56,13 @@
 		<nav>
 			<ul class="sf-menu">
 				<li class="home">
-					<%= link_to 'Anúncie', :controller => :advertise, :action => :index %>
+					<%= link_to 'Anúncie', "/advertise/index" %>
 				</li>
 				<li>
-					<%= link_to 'Anúncios', :controller => :ads, :action => :all %>
+					<%= link_to 'Anúncios', "/ads/all" %>
 				</li>
 				<li>
-					<%= link_to 'Como funciona', :controller => :howto, :action => :index %>
+					<%= link_to 'Como funciona', "/howto/index" %>
 				</li>
 				<li>
 					<%= link_to('Cadastrar', new_user_registration_path)  %> 

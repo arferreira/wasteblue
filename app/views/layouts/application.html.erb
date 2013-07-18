@@ -133,12 +133,12 @@
 				<div class="clear"></div>
 				
 				<ul class="list">
-					<li><%= link_to "A WasteBlue", :controller => :awasteblue, :action => :view %></li>
-					<li><%= link_to "Quem somos", :controller => :about	, :action => :view %></li>
-					<li><%= link_to "Parceiros", :controller => :partners, :action => :view %></li>
-					<li><%= link_to "Blog", :controller => :blog, :action => :index %></li>
-					<li><%= link_to "Imprensa", :controller => :press, :action => :view %></li>
-					<li><%= link_to "Contato", :controller => :contato, :action => :index %></li>
+					<li><%= link_to "A WasteBlue", "/awasteblue/view" %></li>
+					<li><%= link_to "Quem somos", "/about/view" %></li>
+					<li><%= link_to "Parceiros", "/partners/view" %></li>
+					<li><%= link_to "Blog", "/blog/index" %></li>
+					<li><%= link_to "Imprensa", "/press/view" %></li>
+					<li><%= link_to "Contato", "/contato/index" %></li>
 				</ul>			
 			</div>
 			
@@ -191,9 +191,9 @@
 		 	<div class="row">
 				
 				<div class="link-list span6">
-					<%= link_to "Termos de Uso", :controller => :terms, :action => :view %>
-					<%= link_to "Politica de Privacidade", :controller => :policy, :action => :view %>
-					<%= link_to "FAQs", :controller => :faq, :action => :view %>
+					<%= link_to "Termos de Uso", "/terms/view" %>
+					<%= link_to "Politica de Privacidade", "/policy/view" %>
+					<%= link_to "FAQs", "/faq/view" %>
 					
 				</div>	
 				

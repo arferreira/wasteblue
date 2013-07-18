@@ -9,14 +9,11 @@
 </div>
 <div class="categorias field">
   <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
-  <%= f.text_field :waste_name %>
+  <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
 </div>
 <script>
   $().ready(function(){
-    $("#myTags").tagit();
-  });
-  $('#myTags li').on('click',function(){
-    alert('ei')
+    
   });
   $("#purchasing_ad_category_id").change(function(){
     $.ajax({
@@ -27,6 +24,7 @@
         id:$(this).val(),
       },
       success: function(data) {
+        $("#myTags").tagit();
         $("#myTags").find('li').remove();
         $('.categorias').show();
         $.each(data,function(key,value){
@@ -34,8 +32,17 @@
           $("#myTags").append("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+value.id+">"+value.name+"</li>");
           
         })
-        $("#myTags").tagit();
       }
     });
   });
+  $("#purchasing_ad_category_id").bind("ajaxComplete", function(){
+    $('#purchasing_ad_waste_name').tagit();
+    $('#myTags li').on('click',function(){
+      var thisid = $(this).attr('id')
+      var thistext = $(this).text()
+      console.log(thisid + thistext);
+      $('#purchasing_ad_waste_name').prepend("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+thisid+">"+thistext+"</li>")
+    });
+  });
+  
 </script>

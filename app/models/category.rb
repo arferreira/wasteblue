@@ -4,6 +4,4 @@ class Category < ActiveRecord::Base
   acts_as_taggable
   acts_as_taggable_on :waste_name
 
-  has_many :sales_ads
-  has_many :purchasing_ads
 end

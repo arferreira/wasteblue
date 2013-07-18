@@ -36,24 +36,25 @@ class PurchasingAdsController < ApplicationController
 
   # GET /purchasing_ads/1/edit
   def edit
+    @categories = Category.all
     @purchasing_ad = PurchasingAd.find(params[:id])
   end
 
   # POST /purchasing_ads
   # POST /purchasing_ads.json
-  #def create
-  #  @purchasing_ad = PurchasingAd.new(params[:purchasing_ad])
-
-  #  respond_to do |format|
-  #    if @purchasing_ad.save
+  def create
+   @purchasing_ad = PurchasingAd.new(params[:purchasing_ad])
+   @categories = Category.all
+    respond_to do |format|
+     if @purchasing_ad.save
   #      format.html { redirect_to @purchasing_ad, notice: 'Purchasing ad was successfully created.' }
   #      format.json { render json: @purchasing_ad, status: :created, location: @purchasing_ad }
-  #    else
+     else
   #      format.html { render action: "new" }
   #      format.json { render json: @purchasing_ad.errors, status: :unprocessable_entity }
-  #    end
-  #  end
-  #end
+      end
+    end
+  end
 
   # PUT /purchasing_ads/1
   # PUT /purchasing_ads/1.json

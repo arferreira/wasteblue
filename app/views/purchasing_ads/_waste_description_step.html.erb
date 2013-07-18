@@ -6,7 +6,9 @@
 <div class="field">
   <%= f.label :waste_name %><br />
   <%= f.text_field :waste_name %>
-  <ul id="myTags"></ul>
+  <ul id="myTags">
+    <li>Paulo</li>
+  </ul>
 </div>
 <script>
   $().ready(function(){
@@ -25,7 +27,7 @@
         $("#myTags").find('li').remove();
         $.each(data,function(key,value){
           console.log(key+" - "+value.id + " - "+value.name+" ...")
-          $("#myTags").append("<li id="+value.id+">"+value.name+"</li>");
+          $("#myTags").append("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-editable' id="+value.id+">"+value.name+"</li>");
           
         })
         $("#myTags").tagit();

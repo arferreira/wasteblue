@@ -15,7 +15,9 @@
   $().ready(function(){
     $("#myTags").tagit();
   });
-
+  $('#myTags li').on('click',function(){
+    alert('ei')
+  });
   $("#purchasing_ad_category_id").change(function(){
     $.ajax({
       url: "/done",

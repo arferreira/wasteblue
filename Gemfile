@@ -1,5 +1,4 @@
-source :rubygems
-
+source "https://rubygems.org"
 gem 'rails'
 gem 'mysql2'
 gem 'devise'
@@ -8,8 +7,10 @@ gem 'devise'
 gem 'acts-as-taggable-on'
 
 gem 'wicked'
+
 group :development do
   gem 'capistrano'
+  gem "better_errors"
 end
 
 group :production do

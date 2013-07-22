@@ -1,12 +1,11 @@
 source "https://rubygems.org"
+
 gem 'rails'
 gem 'mysql2'
 gem 'devise'
 gem "recaptcha", require: "recaptcha/rails"
-gem 'devise'
-gem 'acts-as-taggable-on'
 
-gem 'wicked'
+gem 'acts-as-taggable-on'
 
 group :development do
   gem 'capistrano'

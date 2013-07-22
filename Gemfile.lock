@@ -128,9 +128,6 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.1)
       rack (>= 1.0)
-    wicked (0.6.1)
-      activesupport (>= 3.0.7)
-      rails (>= 3.0.7)
 
 PLATFORMS
   ruby
@@ -147,4 +144,3 @@ DEPENDENCIES
   rails
   recaptcha
   unicorn
-  wicked

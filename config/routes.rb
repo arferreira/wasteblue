@@ -1,7 +1,6 @@
 Wasteblue::Application.routes.draw do
 
   resources :categories
-  resources :purchasing_ad_steps
 
   match "/done" => "purchasing_ads#done"
 

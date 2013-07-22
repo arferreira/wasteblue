@@ -10,5 +10,132 @@
       </ul>
     </div>
   <% end %>
-  
+  <h5>Escolha o residuo que deseja anunciar</h5>
+  <div class="field">
+    <%= f.label "Categoria:" %>
+    <%= f.select :category_id, [["Selecione uma categoria de resíduo", 0]]+ @categories.collect { |c| [c.name, c.id]}  %>
+  </div>
+  <div class="categorias field">
+    <%= f.label :waste_name, "Escolha um resíduo" %>
+    <ul id="myTags"></ul>
+  </div>
+  <div class="categorias field">
+    <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
+    <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :waste_origin %><br />
+    <%= f.text_field :waste_origin %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br />
+    <%= f.text_field :details %>
+  </div>
+  <div class="field">
+  <%= f.label :today_waste %><br />
+  <%= f.text_field :today_waste %>
+</div>
+<div class="field">
+  <%= f.label :transportation_sample %><br />
+  <%= f.text_field :transportation_sample %>
+</div>
+<div class="field">
+  <%= f.label :waste_address %><br />
+  <%= f.text_field :waste_address %>
+</div>
+<div class="field">
+  <%= f.label :postal_code %><br />
+  <%= f.text_field :postal_code %>
+</div>
+<div class="field">
+  <%= f.label :address_complete %><br />
+  <%= f.text_field :address_complete %>
+</div>
+<div class="field">
+  <%= f.label :district %><br />
+  <%= f.text_field :district %>
+</div>
+<div class="field">
+  <%= f.label :state %><br />
+  <%= f.text_field :state %>
+</div>
+<div class="field">
+  <%= f.label :city %><br />
+  <%= f.text_field :city %>
+</div>
+<div class="field">
+  <%= f.label :quantity %><br />
+  <%= f.text_field :quantity %>
+</div>
+<div class="field">
+  <%= f.label :unit %><br />
+  <%= f.text_field :unit %>
+</div>
+<div class="field">
+  <%= f.label :unit_price %><br />
+  <%= f.text_field :unit_price %>
+</div>
+<div class="field">
+  <%= f.label :total_price %><br />
+  <%= f.text_field :total_price %>
+</div>
+<div class="field">
+  <%= f.label :show_price %><br />
+  <label>Não</label>
+  <%= f.radio_button :show_price, false %>
+  <label>Sim</label>
+  <%= f.radio_button :show_price, true %>
+</div>
+<div class="field">
+  <%= f.label :frequency_removal_waste %><br />
+  <%= f.text_field :frequency_removal_waste %>
+</div>
+<div class="field">
+  <%= f.label :contract_time %><br />
+  <%= f.text_field :contract_time %>
+</div>
+  <div class="actions">
+    <%= f.submit "Continue" %>
+  </div>
+<% end %>
+
+  <script>
+    $().ready(function(){
+      
+    });
+    $("#purchasing_ad_category_id").change(function(){
+      $.ajax({
+        url: "/done",
+        dataType: 'json',
+        beforeSend: function() { alert("Começa") },
+        data: {
+          id:$(this).val(),
+        },
+        success: function(data) {
+          $("#myTags").tagit();
+          $("#myTags").find('li').remove();
+          $('.categorias').show();
+          $.each(data,function(key,value){
+            console.log(key+" - "+value.id + " - "+value.name+" ...")
+            $("#myTags").append("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+value.id+">"+value.name+"</li>");
+            
+          })
+        }
+      });
+    });
+    $("#purchasing_ad_category_id").bind("ajaxComplete", function(){
+      $('#purchasing_ad_waste_name').tagit();
+      $('#myTags li').on('click',function(){
+        var thisid = $(this).attr('id')
+        var thistext = $(this).text()
+        console.log(thisid + thistext);
+        $('#purchasing_ad_waste_name').prepend("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+thisid+">"+thistext+"</li>")
+      });
+    });
+    
+  </script>
 <% end %>

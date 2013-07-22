@@ -45,8 +45,7 @@ class PurchasingAdsController < ApplicationController
     @purchasing_ad = PurchasingAd.new(params[:purchasing_ad])
 
     if @purchasing_ad.save
-      session[:purchasing_ad_id] = @purchasing_ad.id
-      redirect_to purchasing_ads_steps_path
+      redirect_to @purchasing_ad
     else
       render :new
     end

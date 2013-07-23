@@ -13,7 +13,7 @@ if(scroll_top>sticky_navigation_offset_top){
 /*jshint smarttabs: true */
 $('#header').removeClass('bg');
 $('#header').addClass('scroll');
-$("link#menu-b").attr("href",'css/menu-b.css');
+$("link#menu-b").attr("href",'/assets/menu-b.css');
 }else{
 $('#header').removeClass('scroll');
 $('#header').addClass('bg');

@@ -88,4 +88,8 @@ class PurchasingAdsController < ApplicationController
       format.json {render :json => @tags}
     end
   end
+
+  def atualizar_anuncio
+    
+  end
 end

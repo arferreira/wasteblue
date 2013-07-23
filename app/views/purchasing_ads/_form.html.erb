@@ -80,6 +80,9 @@
       <%= f.label :city %><br />
       <%= f.text_field :city %>
     </div>
+    <div>
+      <%= link_to "Avançar", "#", :class => "btn btn-primary waste_transportation_address_btn" %>
+    </div>
   </div>
 
   <div class="price_contract" style="display:none">
@@ -114,9 +117,9 @@
       <%= f.label :contract_time %><br />
       <%= f.text_field :contract_time %>
     </div>
+    <div class="actions">
+    <%= f.submit "Finalizar", :class => "btn btn-primary" %>
   </div>
-  <div class="actions" style="display:none" >
-    <%= f.submit "Finalizar" %>
   </div>
 
   <script>
@@ -128,6 +131,10 @@
       $('.title_details_btn').on('click',function(){
         $('.title_details').hide();
         $('.waste_transportation_address').show();
+      });
+      $('.waste_transportation_address_btn').on('click', function(){
+        $('.waste_transportation_address').hide();
+        $('.price_contract').show();
       });
     });
     $("#purchasing_ad_category_id").change(function(){

@@ -36,7 +36,6 @@
     </div>
     <div class="field">
       <%= f.label :waste_origin %>
-      <%= f.text_field :waste_origin %>
       <% [ 'Pós-indústria', 'Pós-consumo', 'Outros' ].each do |waste_origin| %>
         <br><%= radio_button_tag 'waste_origin', waste_origin, @purchasing_ad == waste_origin %>
         <%= waste_origin.humanize %>
@@ -52,7 +51,7 @@
   </div>
 
   <div class="waste_transportation_address" style="display:none">
-    <h5></h5>
+    <h5>2/5. AMOSTRA, TRANSPORTE E ENDEREÇO DO RESÍDUO</h5>
     <div class="field">
       <%= f.label :today_waste %><br />
       <%= f.text_field :today_waste %>
@@ -91,6 +90,7 @@
   </div>
 
   <div class="price_contract" style="display:none">
+    <h5>3/5. PREÇO, QUANTIDADE E FREQUÊNCIA</h5>
     <div class="field">
       <%= f.label :quantity %><br />
       <%= f.text_field :quantity %>

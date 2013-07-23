@@ -24,6 +24,9 @@
       <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
       <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
     </div>
+    <div>
+      <%= link_to "Avançar", "#", :class => "btn btn-primary name_category_btn" %>
+    </div>
   </div>
   <div class="title_details" style="display:none">
     <div class="field">
@@ -39,6 +42,7 @@
       <%= f.text_field :details %>
     </div>
   </div>
+
   <div class="waste_transportation_address" style="display:none">
     <div class="field">
       <%= f.label :today_waste %><br />
@@ -73,6 +77,7 @@
       <%= f.text_field :city %>
     </div>
   </div>
+
   <div class="price_contract" style="display:none">
     <div class="field">
       <%= f.label :quantity %><br />
@@ -106,13 +111,16 @@
       <%= f.text_field :contract_time %>
     </div>
   </div>
-  <div class="actions">
-    <%= f.submit "Continue" %>
+  <div class="actions" style="display:none" >
+    <%= f.submit "Finalizar" %>
   </div>
 
   <script>
-    $().ready(function(){
-      
+    $(document).ready(function(){
+      $('.name_category_btn').on('click',function(){
+        $('.name_category').hide();
+        $('.title_details').show();
+      });
     });
     $("#purchasing_ad_category_id").change(function(){
       $.ajax({

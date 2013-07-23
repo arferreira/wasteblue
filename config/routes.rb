@@ -28,6 +28,8 @@ Wasteblue::Application.routes.draw do
 
   get "login" => "awasteblue#login"
 
+  get "cadastrar" => "awasteblue#cadastrar"
+
   get "ads/all"
 
   get "advertise/index"

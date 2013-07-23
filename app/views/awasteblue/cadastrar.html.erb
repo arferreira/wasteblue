@@ -1,0 +1,44 @@
+<div class="padrao_box">
+
+<div class="form_padrao">
+<h2>Logar</h2>
+<br>
+<section class="login login_fisica">
+  <h4>Pessoa Fisica</h4>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <div><%= f.label :email, :style => "font-weight:bold;"%><br />
+  <%= f.email_field :email, :style => "width: 300px; height:30px; border:1px solid #00a0db;",:placeholder => "digite o seu email", :autofocus => true %></div>
+
+  <div><%= f.label :senha, :style => "font-weight:bold;" %><br />
+  <%= f.password_field :password, :style => "width: 300px; height:30px; border:1px solid #00a0db;",:placeholder => "sua senha" %></div>
+
+  <div><%= f.label :confirmar_senha, :style => "font-weight:bold;" %><br />
+  <%= f.password_field :password_confirmation, :style => "width: 300px; height:30px; border:1px solid #00a0db;",:placeholder => "confirme sua senha" %></div>
+<br />
+  <div><%= f.submit "Cadastrar", :style => "width:250px; height:30px; background:#00a0db; border:0px; color:white; padding:5px;" %></div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</section>
+
+<section class="login login_juridica">
+  <h4>Pessoa Juridica</h4>
+  <%= form_for(resource_entity, :as => resource_name_entity, :url => registration_path(resource_name_entity)) do |f| %>
+    <div><%= f.label :email, :style => "font-weight:bold;"%><br />
+  <%= f.email_field :email, :style => "width: 300px; height:30px; border:1px solid #00a0db;",:placeholder => "digite o seu email", :autofocus => true %></div>
+
+  <div><%= f.label :senha, :style => "font-weight:bold;" %><br />
+  <%= f.password_field :password, :style => "width: 300px; height:30px; border:1px solid #00a0db;",:placeholder => "sua senha" %></div>
+
+  <div><%= f.label :confirmar_senha, :style => "font-weight:bold;" %><br />
+  <%= f.password_field :password_confirmation, :style => "width: 300px; height:30px; border:1px solid #00a0db;",:placeholder => "confirme sua senha" %></div>
+<br />
+  <div><%= f.submit "Cadastrar", :style => "width:250px; height:30px; background:#00a0db; border:0px; color:white; padding:5px;" %></div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</section>
+
+</div>
+
+</div>

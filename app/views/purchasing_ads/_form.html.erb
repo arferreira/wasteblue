@@ -29,6 +29,7 @@
     </div>
   </div>
   <div class="title_details" style="display:none">
+    <h5>Escolha o residuo que deseja anunciar</h5>
     <div class="field">
       <%= f.label :title %><br />
       <%= f.text_field :title %>
@@ -40,6 +41,9 @@
     <div class="field">
       <%= f.label :details %><br />
       <%= f.text_field :details %>
+    </div>
+    <div>
+      <%= link_to "Avançar", "#", :class => "btn btn-primary title_details_btn" %>
     </div>
   </div>
 
@@ -120,6 +124,10 @@
       $('.name_category_btn').on('click',function(){
         $('.name_category').hide();
         $('.title_details').show();
+      });
+      $('.title_details_btn').on('click',function(){
+        $('.title_details').hide();
+        $('.waste_transportation_address').show();
       });
     });
     $("#purchasing_ad_category_id").change(function(){

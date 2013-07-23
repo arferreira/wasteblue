@@ -29,7 +29,7 @@
     </div>
   </div>
   <div class="title_details" style="display:none">
-    <h5>Escolha o residuo que deseja anunciar</h5>
+    <h5>1/5. TÍTULO E DESCRIÇÃO</h5>
     <div class="field">
       <%= f.label :title %><br />
       <%= f.text_field :title %>
@@ -141,7 +141,7 @@
       $.ajax({
         url: "/done",
         dataType: 'json',
-        beforeSend: function() { alert("Começa") },
+        beforeSend: function() { console.log("Começa") },
         data: {
           id:$(this).val(),
         },

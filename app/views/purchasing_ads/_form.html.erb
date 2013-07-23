@@ -31,15 +31,19 @@
   <div class="title_details" style="display:none">
     <h5>1/5. TÍTULO E DESCRIÇÃO</h5>
     <div class="field">
-      <%= f.label :title %><br />
+      <%= f.label :title %>
       <%= f.text_field :title %>
     </div>
     <div class="field">
-      <%= f.label :waste_origin %><br />
+      <%= f.label :waste_origin %>
       <%= f.text_field :waste_origin %>
+      <% [ 'Pós-indústria', 'Pós-consumo', 'Outros' ].each do |waste_origin| %>
+        <br><%= radio_button_tag 'waste_origin', waste_origin, @purchasing_ad == waste_origin %>
+        <%= waste_origin.humanize %>
+      <% end %>
     </div>
     <div class="field">
-      <%= f.label :details %><br />
+      <%= f.label :details %>
       <%= f.text_field :details %>
     </div>
     <div>
@@ -48,6 +52,7 @@
   </div>
 
   <div class="waste_transportation_address" style="display:none">
+    <h5></h5>
     <div class="field">
       <%= f.label :today_waste %><br />
       <%= f.text_field :today_waste %>

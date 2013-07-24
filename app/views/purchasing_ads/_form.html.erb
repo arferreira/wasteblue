@@ -38,16 +38,16 @@
       <div class="categorias field">
         <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
         <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
-      </div>
-      <div>
-        <%= link_to "Avançar", "#", :class => "btn btn-primary name_category_btn" %>
+        <div>
+          <%= link_to "Avançar", "#", :class => "btn btn-primary name_category_btn" %>
+        </div>
       </div>
     </div>
     <div class="title_details" style="display:none">
       <h5>1/5. TÍTULO E DESCRIÇÃO</h5>
       <div class="field">
         <%= f.label :title, "Título:" %>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, :class => "span6" %>
       </div>
       <div class="field">
         <%= f.label :waste_origin, "Qual a origem desse resíduo:" %>
@@ -59,7 +59,7 @@
       <div class="field">
         <%= f.label :details, "Detalhes:" %>
         <%= f.text_area :details, :placeholder => "Fale sobre o seu resíduo, diga se é sujo,
-   limpo, prensado, misto, etc" %>
+   limpo, prensado, misto, etc", :class => "span6", :style => "heigth:180px;" %>
       </div>
       <div>
         <%= link_to "Avançar", "#", :class => "btn btn-primary title_details_btn" %>

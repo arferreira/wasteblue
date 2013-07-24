@@ -57,8 +57,11 @@
       <%= f.text_field :today_waste %>
     </div>
     <div class="field">
-      <%= f.label :transportation_sample %><br />
-      <%= f.text_field :transportation_sample %>
+      <%= f.label :transportation_sample %>
+      <label for="">Disponibliza Transporte para esse resíduo?
+      <%= f.check_box :transportation_sample %></label>
+      <label for="">Necessita de amostra para esse resíduo?
+      <%= f.check_box :transportation_sample  %></label>
     </div>
     <div class="field">
       <%= f.label :waste_address %><br />

@@ -75,10 +75,12 @@
       </div>
       <div class="field">
         <%= f.label :transportation_sample %>
-        <label for="">Disponibliza Transporte para esse resíduo?
-        <%= f.check_box :transportation_sample %></label>
-        <label for="">Necessita de amostra para esse resíduo?
-        <%= f.check_box :transportation_sample  %></label>
+        <label for=""><%= f.check_box :transportation_sample %>
+        Disponibliza Transporte para esse resíduo?
+        </label>
+        <label for=""><%= f.check_box :transportation_sample  %>
+        Necessita de amostra para esse resíduo?
+        </label>
       </div>
       <div class="field">
         <%= f.label :waste_address %><br />

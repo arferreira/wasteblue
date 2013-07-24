@@ -31,19 +31,20 @@
   <div class="title_details" style="display:none">
     <h5>1/5. TÍTULO E DESCRIÇÃO</h5>
     <div class="field">
-      <%= f.label :title %>
+      <%= f.label :title, "Título:" %>
       <%= f.text_field :title %>
     </div>
     <div class="field">
-      <%= f.label :waste_origin %>
+      <%= f.label :waste_origin, "Qual a origem desse resíduo:" %>
       <% [ 'Pós-indústria', 'Pós-consumo', 'Outros' ].each do |waste_origin| %>
         <br><%= radio_button_tag 'waste_origin', waste_origin, @purchasing_ad == waste_origin %>
         <%= waste_origin.humanize %>
       <% end %>
     </div>
     <div class="field">
-      <%= f.label :details %>
-      <%= f.text_field :details %>
+      <%= f.label :details, "Detalhes:" %>
+      <%= f.text_area :details, :placeholder => "Fale sobre o seu resíduo, diga se é sujo,
+ limpo, prensado, misto, etc" %>
     </div>
     <div>
       <%= link_to "Avançar", "#", :class => "btn btn-primary title_details_btn" %>

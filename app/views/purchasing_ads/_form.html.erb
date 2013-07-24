@@ -10,125 +10,141 @@
       </ul>
     </div>
   <% end %>
-  <div class="name_category">
-    <h5>Escolha o residuo que deseja anunciar</h5>
-    <div class="field">
-      <%= f.label "Categoria:" %>
-      <%= f.select :category_id, [["Selecione uma categoria de resíduo", 0]]+ @categories.collect { |c| [c.name, c.id]}  %>
+  <div class="span3">
+    <div class="name_category">
+      1
     </div>
-    <div class="categorias field">
-      <%= f.label :waste_name, "Escolha um resíduo" %>
-      <ul id="myTags"></ul>
+    <div class="title_details" style="display:none">
+      2
     </div>
-    <div class="categorias field">
-      <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
-      <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
+    <div class="waste_transportation_address" style="display:none">
+      3
     </div>
-    <div>
-      <%= link_to "Avançar", "#", :class => "btn btn-primary name_category_btn" %>
+    <div class="price_contract" style="display:none">
+      4
     </div>
   </div>
-  <div class="title_details" style="display:none">
-    <h5>1/5. TÍTULO E DESCRIÇÃO</h5>
-    <div class="field">
-      <%= f.label :title, "Título:" %>
-      <%= f.text_field :title %>
+  <div class="span7">
+    <div class="name_category">
+      <h5>Escolha o residuo que deseja anunciar</h5>
+      <div class="field">
+        <%= f.label "Categoria:" %>
+        <%= f.select :category_id, [["Selecione uma categoria de resíduo", 0]]+ @categories.collect { |c| [c.name, c.id]}  %>
+      </div>
+      <div class="categorias field">
+        <%= f.label :waste_name, "Escolha um resíduo" %>
+        <ul id="myTags"></ul>
+      </div>
+      <div class="categorias field">
+        <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
+        <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
+      </div>
+      <div>
+        <%= link_to "Avançar", "#", :class => "btn btn-primary name_category_btn" %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :waste_origin, "Qual a origem desse resíduo:" %>
-      <% [ 'Pós-indústria', 'Pós-consumo', 'Outros' ].each do |waste_origin| %>
-        <br><%= radio_button_tag 'waste_origin', waste_origin, @purchasing_ad == waste_origin %>
-        <%= waste_origin.humanize %>
-      <% end %>
+    <div class="title_details" style="display:none">
+      <h5>1/5. TÍTULO E DESCRIÇÃO</h5>
+      <div class="field">
+        <%= f.label :title, "Título:" %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :waste_origin, "Qual a origem desse resíduo:" %>
+        <% [ 'Pós-indústria', 'Pós-consumo', 'Outros' ].each do |waste_origin| %>
+          <br><%= radio_button_tag 'waste_origin', waste_origin, @purchasing_ad == waste_origin %>
+          <%= waste_origin.humanize %>
+        <% end %>
+      </div>
+      <div class="field">
+        <%= f.label :details, "Detalhes:" %>
+        <%= f.text_area :details, :placeholder => "Fale sobre o seu resíduo, diga se é sujo,
+   limpo, prensado, misto, etc" %>
+      </div>
+      <div>
+        <%= link_to "Avançar", "#", :class => "btn btn-primary title_details_btn" %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :details, "Detalhes:" %>
-      <%= f.text_area :details, :placeholder => "Fale sobre o seu resíduo, diga se é sujo,
- limpo, prensado, misto, etc" %>
-    </div>
-    <div>
-      <%= link_to "Avançar", "#", :class => "btn btn-primary title_details_btn" %>
-    </div>
-  </div>
 
-  <div class="waste_transportation_address" style="display:none">
-    <h5>2/5. AMOSTRA, TRANSPORTE E ENDEREÇO DO RESÍDUO</h5>
-    <div class="field">
-      <%= f.label :today_waste %><br />
-      <%= f.text_field :today_waste %>
+    <div class="waste_transportation_address" style="display:none">
+      <h5>2/5. AMOSTRA, TRANSPORTE E ENDEREÇO DO RESÍDUO</h5>
+      <div class="field">
+        <%= f.label :today_waste %><br />
+        <%= f.text_field :today_waste %>
+      </div>
+      <div class="field">
+        <%= f.label :transportation_sample %>
+        <label for="">Disponibliza Transporte para esse resíduo?
+        <%= f.check_box :transportation_sample %></label>
+        <label for="">Necessita de amostra para esse resíduo?
+        <%= f.check_box :transportation_sample  %></label>
+      </div>
+      <div class="field">
+        <%= f.label :waste_address %><br />
+        <%= f.text_field :waste_address %>
+      </div>
+      <div class="field">
+        <%= f.label :postal_code %><br />
+        <%= f.text_field :postal_code %>
+      </div>
+      <div class="field">
+        <%= f.label :address_complete %><br />
+        <%= f.text_field :address_complete %>
+      </div>
+      <div class="field">
+        <%= f.label :district %><br />
+        <%= f.text_field :district %>
+      </div>
+      <div class="field">
+        <%= f.label :state %><br />
+        <%= f.text_field :state %>
+      </div>
+      <div class="field">
+        <%= f.label :city %><br />
+        <%= f.text_field :city %>
+      </div>
+      <div>
+        <%= link_to "Avançar", "#", :class => "btn btn-primary waste_transportation_address_btn" %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :transportation_sample %>
-      <label for="">Disponibliza Transporte para esse resíduo?
-      <%= f.check_box :transportation_sample %></label>
-      <label for="">Necessita de amostra para esse resíduo?
-      <%= f.check_box :transportation_sample  %></label>
-    </div>
-    <div class="field">
-      <%= f.label :waste_address %><br />
-      <%= f.text_field :waste_address %>
-    </div>
-    <div class="field">
-      <%= f.label :postal_code %><br />
-      <%= f.text_field :postal_code %>
-    </div>
-    <div class="field">
-      <%= f.label :address_complete %><br />
-      <%= f.text_field :address_complete %>
-    </div>
-    <div class="field">
-      <%= f.label :district %><br />
-      <%= f.text_field :district %>
-    </div>
-    <div class="field">
-      <%= f.label :state %><br />
-      <%= f.text_field :state %>
-    </div>
-    <div class="field">
-      <%= f.label :city %><br />
-      <%= f.text_field :city %>
-    </div>
-    <div>
-      <%= link_to "Avançar", "#", :class => "btn btn-primary waste_transportation_address_btn" %>
-    </div>
-  </div>
 
-  <div class="price_contract" style="display:none">
-    <h5>3/5. PREÇO, QUANTIDADE E FREQUÊNCIA</h5>
-    <div class="field">
-      <%= f.label :quantity %><br />
-      <%= f.text_field :quantity %>
+    <div class="price_contract" style="display:none">
+      <h5>3/5. PREÇO, QUANTIDADE E FREQUÊNCIA</h5>
+      <div class="field">
+        <%= f.label :quantity %><br />
+        <%= f.text_field :quantity %>
+      </div>
+      <div class="field">
+        <%= f.label :unit %><br />
+        <%= f.text_field :unit %>
+      </div>
+      <div class="field">
+        <%= f.label :unit_price %><br />
+        <%= f.text_field :unit_price %>
+      </div>
+      <div class="field">
+        <%= f.label :total_price %><br />
+        <%= f.text_field :total_price %>
+      </div>
+      <div class="field">
+        <%= f.label :show_price %><br />
+        <label>Não</label>
+        <%= f.radio_button :show_price, false %>
+        <label>Sim</label>
+        <%= f.radio_button :show_price, true %>
+      </div>
+      <div class="field">
+        <%= f.label :frequency_removal_waste %><br />
+        <%= f.text_field :frequency_removal_waste %>
+      </div>
+      <div class="field">
+        <%= f.label :contract_time %><br />
+        <%= f.text_field :contract_time %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Finalizar", :class => "btn btn-primary" %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :unit %><br />
-      <%= f.text_field :unit %>
-    </div>
-    <div class="field">
-      <%= f.label :unit_price %><br />
-      <%= f.text_field :unit_price %>
-    </div>
-    <div class="field">
-      <%= f.label :total_price %><br />
-      <%= f.text_field :total_price %>
-    </div>
-    <div class="field">
-      <%= f.label :show_price %><br />
-      <label>Não</label>
-      <%= f.radio_button :show_price, false %>
-      <label>Sim</label>
-      <%= f.radio_button :show_price, true %>
-    </div>
-    <div class="field">
-      <%= f.label :frequency_removal_waste %><br />
-      <%= f.text_field :frequency_removal_waste %>
-    </div>
-    <div class="field">
-      <%= f.label :contract_time %><br />
-      <%= f.text_field :contract_time %>
-    </div>
-    <div class="actions">
-    <%= f.submit "Finalizar", :class => "btn btn-primary" %>
-  </div>
   </div>
 
   <script>

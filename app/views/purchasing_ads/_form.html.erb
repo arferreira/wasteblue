@@ -192,6 +192,7 @@
         var thistext = $(this).text()
         console.log(thisid + thistext);
         $('#purchasing_ad_waste_name').prepend("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+thisid+">"+thistext+"</li>")
+        $('#purchasing_ad_title').val(thistext)
       });
     });
     

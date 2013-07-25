@@ -5,6 +5,7 @@
 				<h3>Anúncie</h3>
         <h5>Escolha um desses tipos de anúncio:</h5>
         <div class="span3">
+        <% if user_signed_in? || legal_entity_signed_in? %>
         <% if user_signed_in? %>
           <%= link_to "Anunciar Venda", "/pessoa_fisica/conta/#{current_user.id}/criar_anuncio/venda", :class => "btn btn-large btn-success" %>
         <% elsif legal_entity_signed_in? %>
@@ -16,6 +17,9 @@
           <%= link_to "Anunciar Compra", "/pessoa_fisica/conta/#{current_user.id}/criar_anuncio/compra", :class => "btn btn-large btn-warning" %>
         <% elsif legal_entity_signed_in? %>
           <%= link_to "Anunciar Compra", "/pessoa_juridica/conta/#{current_legal_entity.id}/criar_anuncio/compra", :class => "btn btn-large btn-warning" %>
+        <% end %>
+        <% else %>
+          <%= link_to "Logar-se", "/login", :class => "btn btn-large btn-danger" %>
         <% end %>
         </div>
 			</div>

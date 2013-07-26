@@ -139,7 +139,16 @@ height:auto;
 .share_this span{
 float:left;
 }
-
+.label_normal{
+  color: #383838!important;
+  font-size: 14px!important;
+  font-weight: normal!important;
+}
+label{
+  font-size: 15px;
+  color: #00A0DB;
+  font-weight: bold;
+}
 
 .home3 a.blank_link{
 text-align:left;

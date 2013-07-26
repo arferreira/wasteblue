@@ -76,19 +76,20 @@ height: 180px;" %>
       </div>
       <div class="field">
         <%= f.label :transportation_sample, "Transporte e Amostras:" %>
-        <label for=""><%= f.check_box :transportation_sample %>
+        <label class="label_normal">&nbsp;<%= f.check_box :transportation_sample %>
         Disponibliza Transporte para esse resíduo?
         </label>
-        <label for=""><%= f.check_box :transportation_sample  %>
+        <label class="label_normal">&nbsp;<%= f.check_box :transportation_sample  %>
         Necessita de amostra para esse resíduo?
         </label>
       </div>
+      <br>
       <div class="field">
         <%= f.label :same_address, "Endereço do resíduo:" %>
-        <label>
-        <%= f.radio_button :same_address, true %>Mesmo Endereço Cadastrado</label>
-        <label>
-        <%= f.radio_button :same_address, false %>Outro Endereço</label>
+        <label class="label_normal">
+        <%= f.radio_button :same_address, true %>&nbsp;Mesmo Endereço Cadastrado</label>
+        <label class="label_normal">
+        <%= f.radio_button :same_address, false %>&nbsp;Outro Endereço</label>
       </div>
       <div class="show_address" style="display:none;">
         <div class="field">

@@ -71,7 +71,8 @@
       <h5>2/5. AMOSTRA, TRANSPORTE E ENDEREÇO DO RESÍDUO</h5>
       <div class="field">
         <%= f.label :today_waste, "O que é feito atualmente com o residuo atualmente?" %>
-        <%= f.text_area :today_waste %>
+        <%= f.text_area :today_waste, :style => "width: 540px;
+height: 180px;" %>
       </div>
       <div class="field">
         <%= f.label :transportation_sample, "Transporte e Amostras:" %>
@@ -83,28 +84,37 @@
         </label>
       </div>
       <div class="field">
-        <%= f.label :waste_address %>
-        <%= f.text_field :waste_address %>
+        <%= f.label :same_address, "Endereço do resíduo:" %>
+        <label>
+        <%= f.radio_button :same_address, true %>Mesmo Endereço Cadastrado</label>
+        <label>
+        <%= f.radio_button :same_address, false %>Outro Endereço</label>
       </div>
-      <div class="field">
-        <%= f.label :postal_code %>
-        <%= f.text_field :postal_code %>
-      </div>
-      <div class="field">
-        <%= f.label :address_complete %>
-        <%= f.text_field :address_complete %>
-      </div>
-      <div class="field">
-        <%= f.label :district %>
-        <%= f.text_field :district %>
-      </div>
-      <div class="field">
-        <%= f.label :state %>
-        <%= f.text_field :state %>
-      </div>
-      <div class="field">
-        <%= f.label :city %>
-        <%= f.text_field :city %>
+      <div class="show_address" style="display:none;">
+        <div class="field">
+          <%= f.label :waste_address %>
+          <%= f.text_field :waste_address %>
+        </div>
+        <div class="field">
+          <%= f.label :postal_code %>
+          <%= f.text_field :postal_code %>
+        </div>
+        <div class="field">
+          <%= f.label :address_complete %>
+          <%= f.text_field :address_complete %>
+        </div>
+        <div class="field">
+          <%= f.label :district %>
+          <%= f.text_field :district %>
+        </div>
+        <div class="field">
+          <%= f.label :state %>
+          <%= f.text_field :state %>
+        </div>
+        <div class="field">
+          <%= f.label :city %>
+          <%= f.text_field :city %>
+        </div>
       </div>
       <div>
         <%= link_to "Avançar", "#", :class => "btn btn-primary waste_transportation_address_btn" %>

@@ -89,7 +89,7 @@ height: 180px;" %>
         <label class="label_normal">
         <%= f.radio_button :same_address, true %>&nbsp;Mesmo Endereço Cadastrado</label>
         <label class="label_normal">
-        <%= f.radio_button :same_address, false %>&nbsp;Outro Endereço</label>
+        <%= f.radio_button :same_address, false, :class=>"other_address" %>&nbsp;Outro Endereço</label>
       </div>
       <div class="show_address" style="display:none;">
         <div class="field">
@@ -163,6 +163,9 @@ height: 180px;" %>
 
   <script>
     $(document).ready(function(){
+      $('.other_address').on('change',function(){
+        $('.show_address').show();
+      });
       $('.name_category_btn').on('click',function(){
         $('.name_category').hide();
         $('.title_details').show();

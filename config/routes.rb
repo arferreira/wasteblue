@@ -3,6 +3,7 @@ Wasteblue::Application.routes.draw do
   resources :categories
 
   match "/done" => "purchasing_ads#done"
+  match "/atualizar_endereco" => "purchasing_ads#atualizar_endereco"
 
   get "users/show"
 

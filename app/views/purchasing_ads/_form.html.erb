@@ -197,8 +197,21 @@ height: 180px;", :placeholder => "Por exemplo: Utilizo esse material para criar 
         $('.waste_transportation_address').hide('low');
         $('.price_contract').show('low');
 
-        if ($('same_address').is(':checked')){
-          alert("Oiii");
+        if ($('.same_address').is(':checked')){
+          $.ajax({
+            url: "/atualizar_endereco",
+            dataType: 'json',
+            beforeSend: function() { console.log("Começa") },
+            data: {
+              id:<%= current_user.id %>,
+            },
+            success: function(data) {
+              $.each(data,function(key,value){
+                console.log(key+" - "+value.id + " - "+value.name+" ...")
+                $("#myTags").append("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+value.id+">"+value.name+"</li>");
+              })
+            }
+          });
         };
       });
       $('.price_contract_btn').on('click', function(){

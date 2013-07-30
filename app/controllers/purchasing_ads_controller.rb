@@ -90,6 +90,7 @@ class PurchasingAdsController < ApplicationController
   end
 
   def atualizar_endereco
+    user = User.find(params[:id])
     
   end
 end

@@ -233,7 +233,8 @@ height: 180px;" %>
         var thistext = $(this).text()
         console.log(thisid + thistext);
         $('#purchasing_ad_waste_name').prepend("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+thisid+">"+thistext+"</li>")
-        $('#purchasing_ad_title').val("Compro "+thistext)
+        var cat_name = $('#purchasing_ad_category_id :selected').text()
+        $('#purchasing_ad_title').val("Compro "+cat_name+" / "+thistext)
       });
     });
     

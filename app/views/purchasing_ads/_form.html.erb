@@ -73,7 +73,7 @@
       <div class="field">
         <%= f.label :today_waste, "O que é feito atualmente com o residuo atualmente?" %>
         <%= f.text_area :today_waste, :style => "width: 540px;
-height: 180px;" %>
+height: 180px;", :placeholder => "Por exemplo: Utilizo esse material para criar madeira plástica, etc..." %>
       </div>
       <div class="field">
         <%= f.label :transportation_sample, "Transporte e Amostras:" %>
@@ -93,32 +93,32 @@ height: 180px;" %>
         <%= f.radio_button :same_address, false, :class=>"other_address" %>&nbsp;Outro Endereço</label>
       </div>
       <div class="show_address" style="display:none;">
-        <div class="field">
-          <%= f.label :waste_address %>
+        <!--<div class="field">
+          <%= f.label :waste_address, "Endereço Completo:" %>
           <%= f.text_field :waste_address %>
+        </div>-->
+        <div style="margin-left:0px;" class="field span7">
+          <%= f.label :postal_code, "CEP:" %>
+          <%= f.text_field :postal_code, :style => "width: 530px;", :placeholder => "CEP - Apenas Numeros" %>
         </div>
-        <div class="field">
-          <%= f.label :postal_code %>
-          <%= f.text_field :postal_code %>
+        <div style="margin-left:0px;" class="field span7">
+          <%= f.label :address_complete, "Endereço Completo:" %>
+          <%= f.text_field :address_complete, :style => "width: 530px;", :placeholder => "Ex.: Rua Tal, Sala 02" %>
         </div>
-        <div class="field">
-          <%= f.label :address_complete %>
-          <%= f.text_field :address_complete %>
+        <div style="margin-left:0px;" class="field span3">
+          <%= f.label :district, "Bairro:" %>
+          <%= f.text_field :district, :placeholder => "Bairro" %>
         </div>
-        <div class="field">
-          <%= f.label :district %>
-          <%= f.text_field :district %>
-        </div>
-        <div class="field">
-          <%= f.label :state %>
+        <div class="field span3">
+          <%= f.label :state, "Estado:" %>
           <%= f.text_field :state %>
         </div>
-        <div class="field">
-          <%= f.label :city %>
-          <%= f.text_field :city %>
+        <div style="margin-left:0px;" class="field span7">
+          <%= f.label :city, "Cidade:" %>
+          <%= f.text_field :city, :style => "width: 530px;", :placeholder => "Cidade" %>
         </div>
       </div>
-      <div>
+      <div style="margin-left:0px;" class="span7">
         <%= link_to "Avançar", "#", :class => "btn btn-primary waste_transportation_address_btn" %>
       </div>
     </div>
@@ -204,6 +204,14 @@ height: 180px;" %>
       $('.price_contract_btn').on('click', function(){
         $('.price_contract').hide('low');
         $('.pictures').show('low');
+      });
+
+      /*Mltiplicação de Unidades por dinheiros*/
+      $('#purchasing_ad_unit_price').on('change',function(){
+        var quantidade = $('#purchasing_ad_quantity').val();
+        var preco_unitario = $(this).val();
+
+        $('#purchasing_ad_total_price').val(quantidade * preco_unitario);
       });
     });
     $("#purchasing_ad_category_id").change(function(){

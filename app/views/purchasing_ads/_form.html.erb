@@ -176,9 +176,9 @@ height: 180px;" %>
         <%= f.label :picture_extra %>
         <%= f.file_field :picture_extra %>
       </div>
-    </div>
-    <div class="span7 actions">
+      <div class="span7 actions">
         <%= f.submit "Finalizar", :class => "btn btn-primary" %>
+      </div>
     </div>
   </div>
 
@@ -201,6 +201,10 @@ height: 180px;" %>
       $('.waste_transportation_address_btn').on('click', function(){
         $('.waste_transportation_address').hide('low');
         $('.price_contract').show('low');
+      });
+      $('.price_contract_btn').on('click', function(){
+        $('.price_contract').hide('low');
+        $('.pictures').show('low');
       });
     });
     $("#purchasing_ad_category_id").change(function(){

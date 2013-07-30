@@ -126,13 +126,13 @@ margin-top:30px;
 }
 
 .newsletter-widget input#submit {
-background:#0099cd;
-color:#fff;
-padding:13px;
-border-radius:0;
-border:0;
-font-size:14px;
-height:auto;
+  background:#0099cd;
+  color:#fff;
+  padding:0px 13px;
+  border-radius:0;
+  border:0;
+  font-size:14px;
+  height:42px;
 }
 
 

@@ -52,7 +52,7 @@
       <div class="field">
         <%= f.label :waste_origin, "Qual a origem desse resíduo:" %>
         <% [ 'Pós-indústria', 'Pós-consumo', 'Outros' ].each do |waste_origin| %>
-          <br><%= radio_button_tag 'waste_origin', waste_origin, @purchasing_ad == waste_origin %>
+          <br><%= f.radio_button :waste_origin, waste_origin %>
           <%= waste_origin.humanize %>
         <% end %>
       </div>

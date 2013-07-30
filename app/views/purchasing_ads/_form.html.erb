@@ -155,9 +155,30 @@ height: 180px;" %>
         <%= f.label :contract_time %>
         <%= f.text_field :contract_time %>
       </div>
-      <div class="span7 actions">
-        <%= f.submit "Finalizar", :class => "btn btn-primary" %>
+      <div>
+        <%= link_to "Avançar", "#", :class => "btn btn-primary price_contract_btn" %>
       </div>
+    </div>
+    <div class="pictures" style="display:none">
+      <div class="field span7">
+        <%= f.label :picture %>
+        <%= f.file_field :picture %>
+      </div>
+      <div class="field span7">
+        <%= f.label :picture_details %>
+        <%= f.file_field :picture_details %>
+      </div>
+      <div class="field span7">
+        <%= f.label :picture_greatness %>
+        <%= f.file_field :picture_greatness %>
+      </div>
+      <div class="field span7">
+        <%= f.label :picture_extra %>
+        <%= f.file_field :picture_extra %>
+      </div>
+    </div>
+    <div class="span7 actions">
+        <%= f.submit "Finalizar", :class => "btn btn-primary" %>
     </div>
   </div>
 

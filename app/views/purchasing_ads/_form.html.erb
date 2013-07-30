@@ -93,10 +93,6 @@ height: 180px;", :placeholder => "Por exemplo: Utilizo esse material para criar 
         <%= f.radio_button :same_address, false, :class=>"other_address" %>&nbsp;Outro Endereço</label>
       </div>
       <div class="show_address" style="display:none;">
-        <!--<div class="field">
-          <%= f.label :waste_address, "Endereço Completo:" %>
-          <%= f.text_field :waste_address %>
-        </div>-->
         <div style="margin-left:0px;" class="field span7">
           <%= f.label :postal_code, "CEP:" %>
           <%= f.text_field :postal_code, :style => "width: 530px;", :placeholder => "CEP - Apenas Numeros" %>
@@ -200,6 +196,10 @@ height: 180px;", :placeholder => "Por exemplo: Utilizo esse material para criar 
       $('.waste_transportation_address_btn').on('click', function(){
         $('.waste_transportation_address').hide('low');
         $('.price_contract').show('low');
+
+        if ($('same_address').is(':checked')){
+          alert("Oiii");
+        };
       });
       $('.price_contract_btn').on('click', function(){
         $('.price_contract').hide('low');

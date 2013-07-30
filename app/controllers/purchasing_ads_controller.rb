@@ -89,7 +89,7 @@ class PurchasingAdsController < ApplicationController
     end
   end
 
-  def atualizar_anuncio
+  def atualizar_endereco
     
   end
 end

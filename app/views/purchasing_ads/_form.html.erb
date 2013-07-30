@@ -131,7 +131,7 @@ height: 180px;" %>
       </div>
       <div class="field span3">
         <%= f.label :unit %>
-        <%= f.text_field :unit %>
+        <%= f.select :unit, ["Quilogramas","Litros","Unidades","Peças","Metros"] %>
       </div>
       <div style="margin-left:0px;" class="field span3">
         <%= f.label :unit_price %>
@@ -141,22 +141,20 @@ height: 180px;" %>
         <%= f.label :total_price %>
         <%= f.text_field :total_price %>
       </div>
-      <div class="field span7">
+      <div style="margin-left:0px;" class="field span7">
         <%= f.label :show_price %>
-        <label>Não</label>
-        <%= f.radio_button :show_price, false %>
-        <label>Sim</label>
-        <%= f.radio_button :show_price, true %>
+        <label><%= f.radio_button :show_price, false %>Não</label>
+        <label><%= f.radio_button :show_price, true %>Sim</label>
       </div>
-      <div class="field span7">
+      <div style="margin-left:0px;" class="field span7">
         <%= f.label :frequency_removal_waste %>
-        <%= f.text_field :frequency_removal_waste %>
+        <%= f.select :frequency_removal_waste, ["Todo dia","Mensal","Semanal", "Única","A Combinar"] %>
       </div>
-      <div class="field span7">
+      <div style="margin-left:0px;" class="field span7">
         <%= f.label :contract_time %>
-        <%= f.text_field :contract_time %>
+        <%= f.select :contract_time, ["Todo dia","Mensal","Semanal", "Única","A Combinar"] %>
       </div>
-      <div>
+      <div style="margin-left:0px;" class="field span7">
         <%= link_to "Avançar", "#", :class => "btn btn-primary price_contract_btn" %>
       </div>
     </div>

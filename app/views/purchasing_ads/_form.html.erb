@@ -143,8 +143,8 @@ height: 180px;" %>
       </div>
       <div style="margin-left:0px;" class="field span7">
         <%= f.label :show_price %>
+        <label style="float:left; margin-right:15px;"><%= f.radio_button :show_price, true %>Sim</label>
         <label><%= f.radio_button :show_price, false %>Não</label>
-        <label><%= f.radio_button :show_price, true %>Sim</label>
       </div>
       <div style="margin-left:0px;" class="field span7">
         <%= f.label :frequency_removal_waste %>

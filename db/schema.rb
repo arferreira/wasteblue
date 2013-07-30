@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726161512) do
+ActiveRecord::Schema.define(:version => 20130730160937) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -89,6 +89,10 @@ ActiveRecord::Schema.define(:version => 20130726161512) do
     t.string   "current_step"
     t.string   "waste_name"
     t.boolean  "same_address"
+    t.string   "picture"
+    t.string   "picture_extra"
+    t.string   "picture_greatness"
+    t.string   "picture_details"
   end
 
   add_index "purchasing_ads", ["current_step"], :name => "index_purchasing_ads_on_current_step"

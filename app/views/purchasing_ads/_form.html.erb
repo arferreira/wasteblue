@@ -38,6 +38,7 @@
       <div class="categorias field">
         <%= f.label :waste_name, "Ou escreva seu próprio resíduo:" %>
         <ul id="purchasing_ad_waste_name" name="purchasing_ad[waste_name]" ></ul>
+        <%= f.hidden_field :waste_name %>
       </div>
       <div>
         <%= link_to "Avançar", "#", :class => "btn btn-primary name_category_btn" %>
@@ -227,14 +228,15 @@ height: 180px;" %>
       });
     });
     $("#purchasing_ad_category_id").bind("ajaxComplete", function(){
-      $('#purchasing_ad_waste_name').tagit();
+      $('ul#purchasing_ad_waste_name').tagit();
       $('#myTags li').on('click',function(){
         var thisid = $(this).attr('id')
         var thistext = $(this).text()
         console.log(thisid + thistext);
-        $('#purchasing_ad_waste_name').prepend("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+thisid+">"+thistext+"</li>")
+        $('ul#purchasing_ad_waste_name').prepend("<li class='tagit-choice ui-widget-content ui-state-default ui-corner-all tagit-choice-read-only' id="+thisid+">"+thistext+"</li>")
         var cat_name = $('#purchasing_ad_category_id :selected').text()
         $('#purchasing_ad_title').val("Compro "+cat_name+" / "+thistext)
+        $('input[type="hidden"]#purchasing_ad_waste_name').text("Compro "+cat_name+" / "+thistext)
       });
     });
     

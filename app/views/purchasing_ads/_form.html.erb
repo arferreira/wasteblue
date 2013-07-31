@@ -122,32 +122,32 @@ height: 180px;", :placeholder => "Por exemplo: Utilizo esse material para criar 
     <div class="price_contract" style="display:none">
       <h5>3/5. PREÇO, QUANTIDADE E FREQUÊNCIA</h5>
       <div style="margin-left:0px;" class="field span3">
-        <%= f.label :quantity %>
+        <%= f.label :quantity, "Quantidade:" %>
         <%= f.text_field :quantity %>
       </div>
       <div class="field span3">
-        <%= f.label :unit %>
+        <%= f.label :unit, "Unidade:" %>
         <%= f.select :unit, ["Quilogramas","Litros","Unidades","Peças","Metros"] %>
       </div>
       <div style="margin-left:0px;" class="field span3">
-        <%= f.label :unit_price %>
+        <%= f.label :unit_price, "Preço por Unidade(R$):" %>
         <%= f.text_field :unit_price %>
       </div>
       <div class="span3 field">
-        <%= f.label :total_price %>
+        <%= f.label :total_price, "Preço Total(R$):" %>
         <%= f.text_field :total_price %>
       </div>
       <div style="margin-left:0px;" class="field span7">
-        <%= f.label :show_price %>
+        <%= f.label :show_price, "Quer mostrar o preço?" %>
         <label style="float:left; margin-right:15px;"><%= f.radio_button :show_price, true %>Sim</label>
         <label><%= f.radio_button :show_price, false %>Não</label>
       </div>
       <div style="margin-left:0px;" class="field span7">
-        <%= f.label :frequency_removal_waste %>
+        <%= f.label :frequency_removal_waste, "Frequência de Retirada do Resíduo:" %>
         <%= f.select :frequency_removal_waste, ["Todo dia","Mensal","Semanal", "Única","A Combinar"] %>
       </div>
       <div style="margin-left:0px;" class="field span7">
-        <%= f.label :contract_time %>
+        <%= f.label :contract_time, "Tempo de contrato com o Interessado:" %>
         <%= f.select :contract_time, ["Todo dia","Mensal","Semanal", "Única","A Combinar"] %>
       </div>
       <div style="margin-left:0px;" class="field span7">

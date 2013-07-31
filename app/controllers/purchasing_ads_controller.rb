@@ -90,7 +90,10 @@ class PurchasingAdsController < ApplicationController
   end
 
   def atualizar_endereco
-    user = User.find(params[:id])
-    
+    @user = User.find(params[:id])
+    respond_to do |format|
+      format.js {render :nothing => true}
+      format.json {render :json => @user}
+    end
   end
 end

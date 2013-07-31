@@ -19,7 +19,7 @@
           <%= purchasing_ad.details %>
         </span>
         <span class="item_details">
-          <strong><%= purchasing_ad.total_price %></strong><br>
+          <strong><%= number_to_currency(purchasing_ad.total_price , :format => "%u %n", :separator => ",", :delimiter => ".", :unit => "R$") %></strong><br>
           <p><%= purchasing_ad.quantity %>/<%= purchasing_ad.unit %></p>
           <p><%= purchasing_ad.city %>-<%= purchasing_ad.state %></p>
         </span>

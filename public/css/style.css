@@ -791,6 +791,16 @@ margin-top:-50%;
   display: inline-block;
   margin-right: 10px;
 }
+.item_details {
+  position: absolute;
+  right: -20px;
+  top: 1em;
+  width: 140px;
+}
+.item_details strong {
+  color: #29A7FE;
+  font-size: 1.2em;
+}
 .item_name {
   color: #1E7AB9;
   font-weight: bold;

@@ -19,7 +19,9 @@
           <%= purchasing_ad.details %>
         </span>
         <span class="item_details">
-          <%= purchasing_ad.details %>
+          <strong><%= purchasing_ad.total_price %></strong><br>
+          <p><%= purchasing_ad.quantity %>/<%= purchasing_ad.unit %></p><br>
+          <p><%= purchasing_ad.city %>-<%= purchasing_ad.state %></p>
         </span>
       </li>
     <% end %>

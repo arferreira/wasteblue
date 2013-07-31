@@ -9,12 +9,18 @@
     <% @purchasing_ads.each do |purchasing_ad| %>
       <li class="buy">
         <span class="item_type" style="">Compro</span>
-        <%= link_to purchasing_ad do %>
+        <%= link_to purchasing_ad, :class=>"a_img" do %>
           <%= image_tag purchasing_ad.picture_url(:thumb) if purchasing_ad.picture? %>
         <% end %>
-        <%= purchasing_ad.title %>
-        <%= purchasing_ad.category_id %>
-        <%= purchasing_ad.user_type %>
+        <h3 class="item_name">
+          <%= link_to purchasing_ad.title, purchasing_ad %>
+        </h3>
+        <span class="item_description">
+          <%= purchasing_ad.details %>
+        </span>
+        <span class="item_details">
+          <%= purchasing_ad.details %>
+        </span>
       </li>
     <% end %>
   </ul>

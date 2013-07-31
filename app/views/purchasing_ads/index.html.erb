@@ -6,12 +6,13 @@
 <section id="content_an">
   <h1>Anuncios</h1>
   <ul id="item_list">
-    <li class="buy">
-      <% @purchasing_ads.each do |purchasing_ad| %>
-          <%= purchasing_ad.title %>
-          <%= purchasing_ad.category_id %>
-          <%= purchasing_ad.user_type %>
-      <% end %>
-    </li>
+    <% @purchasing_ads.each do |purchasing_ad| %>
+      <li class="buy">
+        <span class="item_type" style="">Compro</span>
+        <%= purchasing_ad.title %>
+        <%= purchasing_ad.category_id %>
+        <%= purchasing_ad.user_type %>
+      </li>
+    <% end %>
   </ul>
 </section>

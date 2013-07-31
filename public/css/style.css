@@ -784,6 +784,19 @@ margin-top:-50%;
   padding-right: 140px;
   position: relative;
 }
+.item_type {
+  border-radius: 999px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  left: -10px;
+  height: 1em;
+  padding: 0.25em 10px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 10px;
+  background-color: #8FD300;
+}
 .service-block p{
 padding:10px;
 color:#383838;

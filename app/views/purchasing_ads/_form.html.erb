@@ -206,7 +206,10 @@ height: 180px;", :placeholder => "Por exemplo: Utilizo esse material para criar 
               id:<%= current_user.id %>,
             },
             success: function(data) {
-              console.log(data.address)
+              $('#purchasing_ad_postal_code').val(data.postal_code);
+              $('#purchasing_ad_address_complete').val(data.address);
+              $('#purchasing_ad_district').val(data.district);
+              $('#purchasing_ad_city').val(data.city);
             }
           });
         };

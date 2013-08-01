@@ -8,18 +8,21 @@
   <p id="category_link">
     <%= link_to @purchasing_ad.category.name, "/"%>/<%= link_to @purchasing_ad.category.tag_list.first, "/"%>
   </p>
-  <p>
-    <b>Title:</b>
-    <%= @purchasing_ad.title %>
-  </p>
+  <article id="item_overview" class="buy">
+    <span id="item_type" style="">Compro</span>
+    <p>
+      <b>Title:</b>
+      <%= @purchasing_ad.title %>
+    </p>
 
-  <p>
-    <b>Category:</b>
-    <%= @purchasing_ad.category_id %>
-  </p>
+    <p>
+      <b>Category:</b>
+      <%= @purchasing_ad.category_id %>
+    </p>
 
-  <p>
-    <b>User type:</b>
-    <%= @purchasing_ad.user_type %>
-  </p>
+    <p>
+      <b>User type:</b>
+      <%= @purchasing_ad.user_type %>
+    </p>
+  </article>
 </section>

@@ -806,6 +806,10 @@ margin-top:-50%;
   position: relative;
   width: 440px;
 }
+#item_overview #item_title {
+  min-height: 2em;
+  width: 85%;
+}
 #item_overview.buy #item_type {
   border-radius: 999px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);

@@ -806,6 +806,18 @@ margin-top:-50%;
   position: relative;
   width: 440px;
 }
+#item_picture {
+  float: left;
+}
+#item_picture_main {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 220px;
+}
+#item_picture_main img {
+  height: 220px;
+}
 #item_overview #item_title {
   min-height: 2em;
   width: 85%;

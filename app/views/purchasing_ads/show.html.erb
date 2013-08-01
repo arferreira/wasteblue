@@ -12,9 +12,13 @@
     <span id="item_type" style="">Compro</span>
     <h2 id="item_title">
       <span><%= @purchasing_ad.title %></span>
-      <span id="item_location"><%= @purchasing_ad.city %>-<%= @purchasing_ad.state %></span>
+      <span id="item_location">(<%= @purchasing_ad.city %>-<%= @purchasing_ad.state %>)</span>
     </h2>
-
+    <div id="item_picture">
+      <div id="item_picture_main">
+        <%= image_tag @purchasing_ad.picture_url(:throbber) if @purchasing_ad.picture? %>
+      </div>
+    </div>
     <p>
       <b>Category:</b>
       <%= @purchasing_ad.category_id %>

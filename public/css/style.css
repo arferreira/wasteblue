@@ -809,6 +809,15 @@ margin-top:-50%;
 #item_overview #item_title {
   min-height: 2em;
   width: 85%;
+  color: #1E7AB9;
+  font-size: 1.3em;
+  margin: 0.5em 0em;
+  text-transform: uppercase;
+}
+#item_title #item_location {
+  color: #666;
+  font-size: 0.75em;
+  font-weight: bold;
 }
 #item_overview.buy #item_type {
   border-radius: 999px;

@@ -801,6 +801,14 @@ margin-top:-50%;
   color: #29A7FE;
   font-size: 1.2em;
 }
+#category_link a {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#category_link a::before {
+  color: #29A7FE;
+  content: "‹ ";
+}
 .item_name {
   color: #1E7AB9;
   font-weight: bold;
